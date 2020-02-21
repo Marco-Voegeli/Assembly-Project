@@ -26,35 +26,7 @@ architecture synth of timer is
 
 begin
 
-readProcess : process(clk,s_read) 
-begin
-    if(rising_edge(clk)) then
-        if (s_read = '1' and s_CS = '1') then
-            case s_addr is
-                when 16#00# => rddata <= COUNTER;
-                when 16#04# =>  rddata <= PERIOD;
-                when 16#08# => 
-                                rddata <= RUN & not(RUN) & ITO & CONT;
-                when 16#12# => 
-                                rddata <= TO & RUN; 
-                when others => 
-            end case;
-        end if;
-    end if;
-end process readProcess;
-
-FP : process(clk) 
-begin 
-    if(rising_edge(clk)) then
-        s_addr <= address;
-        s_CS <= cs;
-        s_READ <= read;
-    end if;
-end process FP;
-       
-
-
-writeProcess : process(clk,write, reset_n) 
+generalProcess : process(clk,write, reset_n) 
 begin
     if (reset_n = '0') then
         ITO <= '0';
@@ -93,8 +65,27 @@ else
         end if;
     end if;
 end if;
+end process generalProcess;
 
-end process writeProcess;
+readProcess : process(clk,s_read) 
+begin
+    if(rising_edge(clk)) then
+        if (s_read = '1' and s_CS = '1') then
+            case s_addr is
+                when 16#00# => rddata <= COUNTER;
+                when 16#04# =>  rddata <= PERIOD;
+                when 16#08# => 
+                                rddata <= RUN & not(RUN) & ITO & CONT;
+                when 16#12# => 
+                                rddata <= TO & RUN; 
+                when others => 
+            end case;
+        end if;
+        s_addr <= address;
+        s_CS <= cs;
+        s_READ <= read;
+    end if;
+end process readProcess;
 
 irq <= ITO AND TO; 
 
