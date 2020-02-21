@@ -43,10 +43,14 @@ begin
     end if;
 end process readProcess;
 
-FelipéProcess : process(clk) 
+FP : process(clk) 
 begin 
-
-end process FelipéProcess;
+    if(rising_edge(clk)) then
+        s_addr <= address;
+        s_CS <= cs;
+        s_READ <= read;
+    end if;
+end process FP;
        
 
 
@@ -62,9 +66,6 @@ begin
         s_READ <= '0';
         s_CS <= '0';
         s_addr <= '0':
-    end if;
-
-
 else
     if(rising_edge(clk)) then
         if(write = '1' AND cs = '1') then
@@ -78,13 +79,7 @@ else
                                 RUN <= wrdata(0);
                 when others => 
             end case;
-    end if;
-end if;
-end process writeProcess;
-
-
-statusProcess : process(clk) 
-    if(rising_edge(clk)) then
+        end if;
         if (COUNTER = '0') then
             if(CONT = '0') then
                 RUN <= '0';
@@ -97,7 +92,9 @@ statusProcess : process(clk)
             end if;
         end if;
     end if;
-end process statusProcess;
+end if;
+
+end process writeProcess;
 
 irq <= ITO AND TO; 
 
