@@ -1,9 +1,3 @@
-• Implement a program that displays three counters on the LEDs:
-– The first counter must be changed each time that one of the push buttons is pressed. The first
-button (button 0) should decrement the counter and the second button should increment the
-counter. If both buttons are pressed at the same time, nothing should happen. You are free
-to give different functionalities for the other two push buttons (e.g., increment, decrement,
-larger step, etc.). The first counter is displayed on leds0, counting from 0.
 – The second counter must be incremented each time the timer generates an IRQ. Set the period
 such that the counter is incremented once every 1000 cycles. The second counter is displayed
 on leds1, counting from 0.
@@ -25,6 +19,21 @@ enable the interrupts.
 .equ TIMER, 0x2020 ; timer address
 .equ STATUS 0x2030 ;Buttons status
 
+_start:
+    br main ; jump to the main function
+
+interrupt_hanler: ; save the registers to the stack
+    ; read the ipending register to identify the source
+    ; call the corresponding routine
+    ; restore the registers from the stack
+    addi ea, ea, -4 ; correct the exception return address
+    eret ; return from exception
+main:
+    ; main procedure here
+
+
+
+
 firstCounter : 
 ldw a0, STATUS($r0)
 andi a1, a0, 15
@@ -39,6 +48,7 @@ addi a2, $r0, 7
 beq a1,a2, btnFour
 
 end:
+    ret
 
 btnOne: 
     addi a3,a3,-1
@@ -58,17 +68,16 @@ btnFour:
     jmpi end
 
 
+secondCounter : 
+    rdctl a0, ctl4
+    andi a0, a0, 1
+    addi a1,a1,1
+    beq a0,a1, incSecCounter
+    ret
 
-
-_start:
-    br main ; jump to the main function
-
-interrupt_hanler: ; save the registers to the stack
-    ; read the ipending register to identify the source
-    ; call the corresponding routine
-    ; restore the registers from the stack
-    addi ea, ea, -4 ; correct the exception return address
-    eret ; return from exception
-main:
-    ; main procedure here
+incSecCounter:
+    ldw a2, LEDS0
+    addi a2,a2,1
+    stw a2, LEDS1
+    ret
 
