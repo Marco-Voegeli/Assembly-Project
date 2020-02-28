@@ -48,7 +48,8 @@ interrupt_hanler:
 	andi a3, a1, 4
 	addi a1, zero, 1
 	beq a2, a1, timerControlStuff
-	beq a3, a1, firstCounter 	; call the corresponding routine
+	beq a3, a1, zero, 1  
+    ; call the corresponding routine
    continue: 
 	ldw a1, 0(sp); restore the registers from the stack
 	ldw a2, 4(sp)
