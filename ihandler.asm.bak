@@ -4,6 +4,45 @@
 .equ PULSEWIDTH, 0x200C
 .equ TIMER, 0x2020 ; timer address
 .equ STATUS, 0x2030 ;Buttons status
+.equ PERIOD, 1000 ;Period for counter
+
+start:
+    br main ; jump to the main function
+interrupt_handler: 
+	addi sp, sp, -16 ; save the registers to the stack
+	stw sp, 0(a1)
+	stw sp, 4(a2)
+	stw sp, 8(a3)
+	stw sp, 12(ra)
+	rdctl a1, ctl4	; read the ipending register to identify the source
+	andi a2, a1, 1
+	andi a3, a1, 4
+	addi a1, zero, 1
+	beq a2, a1, secondCounter
+	beq a3, a1, firstCounter 	; call the corresponding routine
+   continue: 
+	ldw a1, 0(sp); restore the registers from the stack
+	ldw a2, 4(sp)
+	ldw a3, 8(sp)
+	ldw ra, 12(sp)
+	addi sp, sp, 16
+    addi ea, ea, -4 ; correct the exception return address
+    eret ; return from exception
+	
+main:  ; main procedure here
+	addi sp, zero, 0x1F00
+	addi a0, zero, 4
+	addi a1, zero, PERIOD
+	stw a1, TIMER(a0);Initializing the enables
+	addi a0, zero, 1
+	wrctl ctl0, a0
+	addi a0, zero, 5
+	wrctl ctl3, a0
+loop:
+    ldw a2, LEDS2(zero)
+	addi a2,a2,1
+    stw a2, LEDS2(zero)
+    jmpi loop
 
 firstCounter : 
 ldw a0, STATUS(zero)
@@ -34,31 +73,15 @@ btnFour:
     addi a3,a3,3
     jmpi end
 
-_start:
-    br main ; jump to the main function
-
-interrupt_hanler: 
-	addi sp, sp, -16 ; save the registers to the stack
-	stw sp, 0(a1)
-	stw sp, 4(a2)
-	stw sp, 8(a3)
-	stw sp, 12(ra)
-	rdctl a1, ctl4	; read the ipending register to identify the source
-	andi a2, a1, 1
-	andi a3, a1, 4
-	addi a1, zero, 1
-	beq a2, a1, timerControlStuff
-	beq a3, a1, zero, 1  
-    ; call the corresponding routine
-   continue: 
-	ldw a1, 0(sp); restore the registers from the stack
-	ldw a2, 4(sp)
-	ldw a3, 8(sp)
-	ldw ra, 12(sp)
-	addi sp, sp, 16
-    addi ea, ea, -4 ; correct the exception return address
-    eret ; return from exception
-	
-main:
-    ; main procedure here
+secondCounter: 
+    rdctl a0, ctl4
+    andi a0, a0, 1
+    addi a1, zero, 1
+    beq a0,a1, incSecCounter
+    jmpi continue
+incSecCounter:
+    ldw a2, LEDS0(zero)
+    addi a2,a2,1
+    stw a2, LEDS1(zero)
+    jmpi continue
 
