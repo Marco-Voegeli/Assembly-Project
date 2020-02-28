@@ -80,7 +80,7 @@ secondCounter:
     beq a0,a1, incSecCounter
     jmpi continue
 incSecCounter:
-    ldw a2, LEDS0(zero)
+    ldw a2, LEDS1(zero)
     addi a2,a2,1
     stw a2, LEDS1(zero)
     jmpi continue
