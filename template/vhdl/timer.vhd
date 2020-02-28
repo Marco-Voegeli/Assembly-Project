@@ -20,7 +20,7 @@ end timer;
 
 architecture synth of timer is
 
-    signal ITO,CONT,TO,RUN,s_READ,s_CS : std_logic;
+    signal ITO,CONT,s_TO,RUN,s_READ,s_CS : std_logic;
     signal s_addr : std_logic_vector(1 downto 0);
     signal COUNTER, PERIOD : std_logic_vector(31 downto 0);
 
@@ -31,36 +31,39 @@ begin
     if (reset_n = '0') then
         ITO <= '0';
         CONT <= '0';
-        TO <= '0';
+        s_TO <= '0';
         RUN <= '0';
-        COUNTER <= '0'; 
-        PERIOD <= '0';
+        COUNTER <= "0"; 
+        PERIOD <= "0";
         s_READ <= '0';
         s_CS <= '0';
-        s_addr <= '0':
+        s_addr <= "0";
 else
     if(rising_edge(clk)) then
         if(write = '1' AND cs = '1') then
-            case address is
-                when 16#04# =>  PERIOD <= wrdata;
+            case address is --shouldn't we check the address in terms of 0,1,2,3 because it is 2 bits
+                when std_logic_vector(to_unsigned(4,2)) =>  PERIOD <= wrdata;
                                 COUNTER <= PERIOD;
-                when 16#08# =>  ITO <= wrdata(1);
+                when std_logic_vector(to_unsigned(8,2)) =>  ITO <= wrdata(1);
                                 CONT <= wrdata(0);
-                                RUN <= '1' when wrdata(3) = '1' else '0';
-                when 16#12# =>  TO <= wrdata(1);
+                                if (wrdata(3) = '1') then
+                                RUN <= '1'; else 
+                                RUN <= '0';
+                                end if;
+                when std_logic_vector(to_unsigned(12,2)) =>  s_TO <= wrdata(1);
                                 RUN <= wrdata(0);
                 when others => 
             end case;
         end if;
-        if (COUNTER = '0') then
+        if (COUNTER = (others => '0')) then --problem aqui
             if(CONT = '0') then
                 RUN <= '0';
             end if;
-            TO <= '1';
+            s_TO <= '1';
             COUNTER <= PERIOD;
         else
             if(RUN = '1') then
-                COUNTER = std_logic_vector(to_unsigned(COUNTER) - 1));
+                COUNTER <= std_logic_vector(to_unsigned(COUNTER) - 1),32);
             end if;
         end if;
     end if;
@@ -77,7 +80,7 @@ begin
                 when 16#08# => 
                                 rddata <= RUN & not(RUN) & ITO & CONT;
                 when 16#12# => 
-                                rddata <= TO & RUN; 
+                                rddata <= s_TO & RUN; 
                 when others => 
             end case;
         end if;
@@ -87,6 +90,6 @@ begin
     end if;
 end process readProcess;
 
-irq <= ITO AND TO; 
+irq <= ITO AND s_TO; 
 
 end synth;
