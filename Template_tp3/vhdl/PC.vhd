@@ -19,9 +19,16 @@ end PC;
 
 architecture synth of PC is
 
+signal s_imm : std_logic_vector(17 downto 0);
+signal cur_addr : integer := 0;
+signal s_addr : std_logic_vector(31 downto 0);
 
- s_imm <= imm & "00";
+begin
+s_imm <= imm & "00";
+
+ 
 PC_process : process(clk,reset_n)
+
 begin
     if(reset_n = '0') then
         cur_addr <= 0 ;
@@ -35,7 +42,7 @@ begin
                 elsif(sel_a = '1') then
                     cur_addr <= to_integer(unsigned(a));
                 elsif(sel_ihandler = '1') then
-                    cur_addr <= to_integer(unsigned(sel_ihandler))
+                    cur_addr <= 4;
                 else
                     cur_addr <= cur_addr + 4;
             end if;
@@ -46,8 +53,5 @@ end process PC_process;
 s_addr <= std_logic_vector(to_unsigned(cur_addr,32));
 --addr <= s_addr(31 downto 2) & "00";
 addr <= (31 downto 16 => '0') & s_addr(15 downto 2)  & "00"; 
-    
-    
-begin
     
 end synth;
