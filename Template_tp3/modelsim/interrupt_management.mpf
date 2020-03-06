@@ -223,7 +223,7 @@ resolution = 1ns
 UserTimeUnit = default
 
 ; Default run length
-RunLength = 100 ns
+RunLength = 0 ns
 
 ; Maximum iterations that can be run without advancing simulation time
 IterationLimit = 5000
@@ -526,30 +526,40 @@ libhm = $MODEL_TECH/libhm.sl
 ; description of a message.
 
 [Project]
+; Warning -- Do not edit the project properties directly.
+;            Property names are dynamic in nature and property
+;            values have special syntax.  Changing property data directly
+;            can result in a corrupt MPF file.  All project properties
+;            can be modified through project window dialogs.
 Project_Version = 6
 Project_DefaultLib = work
 Project_SortMethod = unused
 Project_Files_Count = 5
-Project_File_0 = ../vhdl/control_registers.vhd
-Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1204884181 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 vhdl_options {} vhdl_warn4 1 ood 0 vhdl_warn5 1 compile_to work compile_order 1 dont_compile 0 cover_stmt 1 vhdl_use93 2002
-Project_File_1 = ../testbench/check_functions.vhd
-Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1204885944 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_warn3 1 vhdl_warn4 1 vhdl_options {} vhdl_warn5 1 ood 0 compile_to work compile_order 0 dont_compile 0 vhdl_use93 2002 cover_stmt 1
+Project_File_0 = ../testbench/check_functions.vhd
+Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1583481243 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 vhdl_options {} vhdl_warn4 1 ood 0 vhdl_warn5 1 compile_to work compile_order 0 dont_compile 0 cover_stmt 1 vhdl_use93 2002
+Project_File_1 = ../vhdl/control_registers.vhd
+Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1583489868 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_warn3 1 vhdl_warn4 1 vhdl_options {} vhdl_warn5 1 ood 0 compile_to work compile_order 1 dont_compile 0 vhdl_use93 2002 cover_stmt 1
 Project_File_2 = ../testbench/PC_tb.vhd
-Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1205313893 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 vhdl_options {} vhdl_warn4 1 ood 0 vhdl_warn5 1 compile_to work compile_order 3 dont_compile 0 cover_stmt 1 vhdl_use93 2002
-Project_File_3 = ../testbench/control_registers_tb.vhd
-Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1204885430 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_warn3 1 vhdl_warn4 1 vhdl_options {} vhdl_warn5 1 ood 0 compile_to work compile_order 4 dont_compile 0 vhdl_use93 2002 cover_stmt 1
-Project_File_4 = ../vhdl/PC.vhd
-Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1205337309 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_warn3 1 vhdl_warn4 1 vhdl_options {} vhdl_warn5 1 ood 0 compile_to work compile_order 2 dont_compile 0 vhdl_use93 2002 cover_stmt 1
+Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1583481243 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_warn3 1 vhdl_warn4 1 vhdl_options {} vhdl_warn5 1 ood 0 compile_to work compile_order 3 dont_compile 0 vhdl_use93 2002 cover_stmt 1
+Project_File_3 = ../vhdl/PC.vhd
+Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1583487116 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 vhdl_options {} vhdl_warn4 1 ood 0 vhdl_warn5 1 compile_to work compile_order 2 dont_compile 0 cover_stmt 1 vhdl_use93 2002
+Project_File_4 = ../testbench/control_registers_tb.vhd
+Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 folder {Top Level} last_compile 1583481243 vhdl_disableopt 0 vhdl_vital 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 vhdl_options {} vhdl_warn4 1 ood 0 vhdl_warn5 1 compile_to work compile_order 4 dont_compile 0 cover_stmt 1 vhdl_use93 2002
 Project_Sim_Count = 0
 Project_Folder_Count = 0
 Echo_Compile_Output = 0
 Save_Compile_Report = 1
 Project_Opt_Count = 0
 ForceSoftPaths = 0
+ProjectStatusDelay = 5000
 VERILOG_DoubleClick = Edit
 VERILOG_CustomDoubleClick = 
+SYSTEMVERILOG_DoubleClick = Edit
+SYSTEMVERILOG_CustomDoubleClick = 
 VHDL_DoubleClick = Edit
 VHDL_CustomDoubleClick = 
+PSL_DoubleClick = Edit
+PSL_CustomDoubleClick = 
 TEXT_DoubleClick = Edit
 TEXT_CustomDoubleClick = 
 SYSTEMC_DoubleClick = Edit
@@ -566,6 +576,21 @@ XML_DoubleClick = Edit
 XML_CustomDoubleClick = 
 LOGFILE_DoubleClick = Edit
 LOGFILE_CustomDoubleClick = 
-EditorState = {tabbed horizontal 1}
-Project_Major_Version = 6
-Project_Minor_Version = 0
+UCDB_DoubleClick = Edit
+UCDB_CustomDoubleClick = 
+TDB_DoubleClick = Edit
+TDB_CustomDoubleClick = 
+UPF_DoubleClick = Edit
+UPF_CustomDoubleClick = 
+PCF_DoubleClick = Edit
+PCF_CustomDoubleClick = 
+PROJECT_DoubleClick = Edit
+PROJECT_CustomDoubleClick = 
+VRM_DoubleClick = Edit
+VRM_CustomDoubleClick = 
+DEBUGDATABASE_DoubleClick = Edit
+DEBUGDATABASE_CustomDoubleClick = 
+DEBUGARCHIVE_DoubleClick = Edit
+DEBUGARCHIVE_CustomDoubleClick = 
+Project_Major_Version = 10
+Project_Minor_Version = 5

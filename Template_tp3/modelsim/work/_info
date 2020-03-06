@@ -1,3 +1,231 @@
 m255
+K4
+z0
 13
 cModel Technology
+Pcheck_functions
+Z0 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 w1583481243
+Z5 dC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/modelsim
+Z6 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/check_functions.vhd
+Z7 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/check_functions.vhd
+l0
+L7
+VNz7g<EgYz[81VPk^6CW5A2
+!s100 8zcQiTefUA3:zm26RbVjX3
+Z8 OV;C;10.5b;63
+32
+b1
+Z9 !s110 1583487230
+!i10b 1
+Z10 !s108 1583487230.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/check_functions.vhd|
+Z12 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/check_functions.vhd|
+!i113 1
+Z13 !s102 -cover s
+Z14 o-work work -2002 -explicit -cover s
+Z15 tExplicit 1 CvgOpt 0
+Bbody
+Z16 DPx4 work 15 check_functions 0 22 Nz7g<EgYz[81VPk^6CW5A2
+R0
+R1
+R2
+R3
+l0
+L26
+V@YEQm>g:mbe6=eHPE^Ngo0
+!s100 zW6H4jeez0kBE=k2gFA@02
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+R15
+Econtrol_registers
+Z17 w1583489868
+R1
+R2
+R3
+R5
+Z18 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/control_registers.vhd
+Z19 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/control_registers.vhd
+l0
+L5
+VK2V7cABFRK5>L4^2UQFf53
+!s100 LRK6:<0X3]:=Ld3f5h?1Z3
+R8
+32
+Z20 !s110 1583489871
+!i10b 1
+Z21 !s108 1583489871.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/control_registers.vhd|
+Z23 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/control_registers.vhd|
+!i113 1
+R13
+R14
+R15
+Asynth
+R1
+R2
+R3
+Z24 DEx4 work 17 control_registers 0 22 K2V7cABFRK5>L4^2UQFf53
+l25
+L21
+VzP2BU9jeP`@fkj155DPJ;2
+!s100 BX[f]5ezE?efCWni7Mg=E0
+R8
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R13
+R14
+R15
+Econtrol_registers_tb
+R4
+R1
+R16
+R0
+R2
+R3
+R5
+Z25 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/control_registers_tb.vhd
+Z26 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/control_registers_tb.vhd
+l0
+L8
+VbcVVQ1>Aic6UJM6`9eP^T0
+!s100 Bmf6<32H1W;44XQoozS3[0
+R8
+32
+Z27 !s110 1583487231
+!i10b 1
+Z28 !s108 1583487231.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/control_registers_tb.vhd|
+Z30 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/control_registers_tb.vhd|
+!i113 1
+R13
+R14
+R15
+Atestbench
+R1
+R16
+R0
+R2
+R3
+DEx4 work 20 control_registers_tb 0 22 bcVVQ1>Aic6UJM6`9eP^T0
+l44
+L11
+V`m[h?oT6l7UJ?Jo>0a1FV3
+!s100 U7JiZ9X`Hg9<4j7?]9z^B0
+R8
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R13
+R14
+R15
+Epc
+Z31 w1583487116
+R1
+R2
+R3
+R5
+Z32 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/PC.vhd
+Z33 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/PC.vhd
+l0
+L5
+VM@I_NUZe:cee5MX;nQe731
+!s100 aRR;;M:J>1^z@<8gXEOkG2
+R8
+32
+R9
+!i10b 1
+R10
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/PC.vhd|
+Z35 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/vhdl/PC.vhd|
+!i113 1
+R13
+R14
+R15
+Asynth
+R1
+R2
+R3
+DEx4 work 2 pc 0 22 M@I_NUZe:cee5MX;nQe731
+l26
+L20
+VgHj53<MobbO4Lm0G?LS;W1
+!s100 T8@<5lXB`eiW>:z]ma:4`1
+R8
+32
+R9
+!i10b 1
+R10
+R34
+R35
+!i113 1
+R13
+R14
+R15
+Epc_tb
+R4
+R1
+R16
+R0
+R2
+R3
+R5
+Z36 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/PC_tb.vhd
+Z37 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/PC_tb.vhd
+l0
+L8
+Ve2@8z=`O[cDjSSSFdGAQc3
+!s100 Jmimk;EW3XNHP2mI:E3VT1
+R8
+32
+R27
+!i10b 1
+R28
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/PC_tb.vhd|
+Z39 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/Template_tp3/testbench/PC_tb.vhd|
+!i113 1
+R13
+R14
+R15
+Atestbench
+R1
+R16
+R0
+R2
+R3
+DEx4 work 5 pc_tb 0 22 e2@8z=`O[cDjSSSFdGAQc3
+l44
+L11
+VUCXO]]4=7HI2PAaZKXBkI3
+!s100 BJ4iD@L<mcA9zmjT6`16K2
+R8
+32
+R27
+!i10b 1
+R28
+R38
+R39
+!i113 1
+R13
+R14
+R15
