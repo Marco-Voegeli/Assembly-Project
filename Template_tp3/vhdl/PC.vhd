@@ -51,7 +51,6 @@ begin
     end if;
 end process PC_process;
 s_addr <= std_logic_vector(to_unsigned(cur_addr,32));
---addr <= s_addr(31 downto 2) & "00";
 addr <= (31 downto 16 => '0') & s_addr(15 downto 2)  & "00"; 
     
 end synth;
