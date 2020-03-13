@@ -24,15 +24,14 @@ signal s_rddata, s_ctl0, s_ctl1, s_ctl3, s_ctl4, s_ctl5: std_logic_vector(31 dow
 
 begin
 
-main: process(clk, reset_n, address, wrdata, s_ctl0, write_n, backup_n, restore_n )
+main: process(clk, reset_n, address, wrdata, write_n, backup_n, restore_n )
 begin
     if (reset_n = '0') then 
-            s_rddata <= (31 downto 0 => '0');
+           -- s_rddata <= (31 downto 0 => 'Z'); --Messing up with out quartus
             s_ctl0 <= (31 downto 0 => '0'); 
             s_ctl1 <= (31 downto 0 => '0');
             s_ctl3 <= (31 downto 0 => '0');
             s_ctl5 <= (31 downto 0 => '0');
-            s_rddata <= (31 downto 0 => 'Z');
     else
         if(rising_edge(clk)) then
             if(write_n = '0') then 
@@ -41,7 +40,7 @@ begin
                     when "001" => s_ctl1 <= wrdata;
                     when "011" => s_ctl3 <= wrdata;
                     when "101" => s_ctl5 <= wrdata;
-                    when others =>
+                    when others => null;
                 end case;
             end if;
             if(backup_n = '0') then
@@ -55,19 +54,13 @@ begin
     end if;   
 end process main;
 
-asynchronous: process(address, s_ctl0, s_ctl1, s_ctl3, s_ctl4, s_ctl5)
-begin
-    
-    case address is
-        when "000" => s_rddata <= s_ctl0;
-        when "001" => s_rddata <= s_ctl1;
-        when "011" => s_rddata <= s_ctl3;
-        when "100" => s_rddata <= s_ctl4;
-        when "101" => s_rddata <= s_ctl5;
-        when others =>
-    end case;
-end process asynchronous;
-
+--Reading data
+s_rddata <= s_ctl0 when "000" = address else 
+				s_ctl1 when "001" = address else
+				s_ctl3 when "011" = address else
+				s_ctl4 when "100" = address else
+				s_ctl5 when "101" = address;
+				
 s_ctl4 <= irq and s_ctl3;
 rddata <= s_rddata;
 ipending <= '1' when s_ctl0(0) = '1' and (s_ctl4 /= (31 downto 0 => '0')) else '0';
