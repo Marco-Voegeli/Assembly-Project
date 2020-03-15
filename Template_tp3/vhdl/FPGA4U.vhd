@@ -23,7 +23,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY work;
 
 ENTITY FPGA4U IS 
-GENERIC (FREQ : INTEGER := 50
+GENERIC (FREQ : INTEGER := 50--Was 50
 		);
 	PORT
 	(

@@ -4,7 +4,7 @@ z0
 13
 cModel Technology
 Etimer
-Z0 w1583492820
+Z0 w1584287333
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -13,13 +13,13 @@ Z5 8C:\Users\MarcoPC\Documents\Work\EPFL\BA4\ArchSoC\ArchSoCProject1\template\vh
 Z6 FC:\Users\MarcoPC\Documents\Work\EPFL\BA4\ArchSoC\ArchSoCProject1\template\vhdl\timer.vhd
 l0
 L5
-VC6N4HC_U8:i1MMJBL`Lh`0
-!s100 S940ASUddNF;Y<O5FiVln0
+VGobRI:>RUV:5>SXBe11A[2
+!s100 P=<1fA>a2<F:__0nh8mT40
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1583492822
+Z8 !s110 1584287339
 !i10b 1
-Z9 !s108 1583492822.000000
+Z9 !s108 1584287339.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:\Users\MarcoPC\Documents\Work\EPFL\BA4\ArchSoC\ArchSoCProject1\template\vhdl\timer.vhd|
 Z11 !s107 C:\Users\MarcoPC\Documents\Work\EPFL\BA4\ArchSoC\ArchSoCProject1\template\vhdl\timer.vhd|
 !i113 1
@@ -30,11 +30,11 @@ Asynth
 R1
 R2
 R3
-Z15 DEx4 work 5 timer 0 22 C6N4HC_U8:i1MMJBL`Lh`0
+DEx4 work 5 timer 0 22 GobRI:>RUV:5>SXBe11A[2
 l26
-L21
-V9TPZjW]BA036DnXUG?ii?0
-!s100 =LkG0P:Wf5=lYhY4>VKTk2
+L20
+VBehz6@hU8_m0GfhAAPQ`f1
+!s100 GIc[0m`>F`MOhznFiYflF3
 R7
 32
 R8
@@ -47,46 +47,46 @@ R12
 R13
 R14
 Etimer_tb
-Z16 w1582271333
-Z17 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z15 w1582271333
+Z16 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
 R4
-Z18 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd
-Z19 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd
+Z17 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd
+Z18 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd
 l0
 L7
 VjW[48_W3G0E8PR`f_gdmX2
 !s100 FDa[l?z0FX9ZJEbMO2EVZ3
 R7
 32
-Z20 !s110 1583490250
+R8
 !i10b 1
-Z21 !s108 1583490249.000000
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd|
-Z23 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd|
+R9
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd|
+Z20 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/template/testbench/timer_tb.vhd|
 !i113 1
 R12
 R13
 R14
 Atestbench
-R17
+R16
 R1
 R2
 R3
-DEx4 work 8 timer_tb 0 22 jW[48_W3G0E8PR`f_gdmX2
+Z21 DEx4 work 8 timer_tb 0 22 jW[48_W3G0E8PR`f_gdmX2
 l96
 L10
-Ve83kzKN8c6mO1=J9Hd>>N0
-!s100 `1T?=BKB^Of;cNE:lhzgY1
+Z22 Ve83kzKN8c6mO1=J9Hd>>N0
+Z23 !s100 `1T?=BKB^Of;cNE:lhzgY1
 R7
 32
-R20
+R8
 !i10b 1
-R21
-R22
-R23
+R9
+R19
+R20
 !i113 1
 R12
 R13
