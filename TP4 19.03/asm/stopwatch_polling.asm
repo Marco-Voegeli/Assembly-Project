@@ -12,8 +12,17 @@ stw t0, LFSR(zero)
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING ABOVE THIS LINE
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+main:
+    addi sp, zero, 0x1BA0 ;to be checked
+    addi t0, zero,100 
+    stw t0, TIMER+4(zero) ;set period
+    addi t0, zero,11
+    stw t0, TIMER+11(zero); setting control 
 
-; WRITE YOUR CODE AND CONSTANT DEFINITIONS HERE
+loop:
+    ldw a0, TIMER(zero) ; set time mesured in t0
+    beq a0,zero,display
+    jmpi loop
 
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING BELOW THIS LINE
