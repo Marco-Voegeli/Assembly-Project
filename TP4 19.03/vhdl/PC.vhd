@@ -18,5 +18,36 @@ entity PC is
 end PC;
 
 architecture synth of PC is
+signal s_imm : std_logic_vector(15 downto 0);
+signal cur_addr : std_logic_vector(15 downto 0);
+signal s_added: std_logic_vector(15 downto 0);
 begin
+s_imm <= imm(13 downto 0) & "00";
+s_added <= std_logic_vector(signed(cur_addr) + signed(imm));
+ 
+PC_process : process(clk,reset_n)
+
+begin
+    if(reset_n = '0') then
+        cur_addr <= X"0000";
+    else 
+        if(rising_edge(clk)) then
+            if(en = '1') then
+                if(add_imm ='1') then
+                    cur_addr <= s_added(15 downto 2) & "00"; 
+                elsif(sel_imm = '1') then
+                    cur_addr <= s_imm;
+                elsif(sel_a = '1') then
+                    cur_addr <= a(15 downto 2) & "00";
+                elsif(sel_ihandler = '1') then
+                    cur_addr <= X"0004";
+                else
+                    cur_addr <= std_logic_vector(signed(cur_addr) + 4);
+            end if;
+            end if;
+        end if;
+    end if;
+end process PC_process;
+addr <= (31 downto 16 => '0') & cur_addr; 
+    
 end synth;
