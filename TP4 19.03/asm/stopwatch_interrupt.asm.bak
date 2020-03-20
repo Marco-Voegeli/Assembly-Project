@@ -84,7 +84,7 @@ button_0:
 ;Boolean en memoire
 	stw t0, B_PRESSED(zero)
 	addi t1, zero, 1
-	wrctl ctl3, t1 
+	wrctl ctl3, t1 ;Disabling the buttons interrupts 
 	wrctl ctl0, t0 ;After storing the error address
 	call spend_time
 	stw zero, B_PRESSED(zero)
