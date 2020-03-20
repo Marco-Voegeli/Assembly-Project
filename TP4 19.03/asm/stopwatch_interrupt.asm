@@ -19,26 +19,26 @@ main:
 
     ; WRITE YOUR CONSTANT DEFINITIONS AND main HERE
 .equ COUNTER, 0x10A0
-
+.equ B_PRESSED, 0x10B0
+    addi 	t0, zero, 0x4C4
+	slli 	t0, t0, 12
+	addi 	t0, t0, 0xB40
+;	addi 	t0, zero, 100
+    stw 	t0, TIMER+4(zero) ;set period
+    addi 	t0, zero,11
+    stw 	t0, TIMER+8(zero); setting control
     addi	sp, zero, 0x1BA0 
 	stw		zero, COUNTER(zero)
 	addi	t0, zero, 1 ;Setting the Control Registers
 	wrctl 	ctl0, t0
 	addi 	t0, zero, 5 ;Setting the iactive bits
-	wrctl 	ctl3, t0
-    addi 	t0, zero, 0x4C4
-	slli 	t0, t0, 12
-	addi 	t0, t0, 0xB40
-;	addi 	t0, zero, 10
-    stw 	t0, TIMER+4(zero) ;set period
-    addi 	t0, zero,11
-    stw 	t0, TIMER+8(zero); setting control 
+	wrctl 	ctl3, t0 
 loop:
 	jmpi	loop ;Infinite loop waiting for IRQ's
 	
 interrupt_handler:
 	; WRITE YOUR INTERRUPT HANDLER HERE
-	wrctl 	ctl0, zero
+	wrctl 	ctl0, zero ;Should be done automatically....
 ;Stack 
 	addi	sp, sp, -36
     stw		t0, 0(sp)
@@ -73,7 +73,7 @@ err_end:
 	eret
 button_pressed:
     ldw t0, BUTTON + 4(zero)
-;	stw t0, BUTTON + 4(zero) ;Removing the IRQ but not changing the edge capture
+	stw zero, BUTTON + 4 (zero);resetting EDGE_CAPTURE here
 	addi t1, zero, 1
 	beq t0, t1, button_0
 	jmpi but_end
@@ -81,17 +81,24 @@ button_0:
 	addi t0, zero, 1
 	addi sp, sp, -4
 	stw ea, 0(sp) ;Storing ea register in stack
+;Boolean en memoire
+	stw t0, B_PRESSED(zero)
+	addi t1, zero, 1
+	wrctl ctl3, t1 ;Disabling the buttons interrupts 
 	wrctl ctl0, t0 ;After storing the error address
 	call spend_time
+	stw zero, B_PRESSED(zero)
+;Turn boolean off
+	wrctl ctl0, zero
+	addi t1, zero, 5
+	wrctl ctl3, t1
 	ldw ea, 0(sp)
 	addi sp, sp, 4
 but_end:
-	stw zero, BUTTON + 4 (zero);resetting EDGE_CAPTURE here
-	wrctl ctl0, zero ;We are out of spend_time so we go back to no nested exceptions
+ ;We are out of spend_time so we go back to no nested exceptions
 	jmpi err_end ;Check this maybe
 timer:
-    ldw t0, BUTTON + 4(zero)
-	andi t0, t0, 1 ;So it still works even if we have multiple buttons pressed
+	ldw t0, B_PRESSED(zero)
 	addi t1, zero, 1
 	beq t0, t1, timer_without_display
 	ldw a0, COUNTER(zero)
@@ -231,6 +238,7 @@ spend_time:
     addi t0, zero, 1
     slli t0, t0, 22
     add t1, t0, t1
+;	addi t1, zero, 20 ;SpendTIME REMOVE PLEASE AT QUARTUS
 
 spend_time_loop:
     addi   t1, t1, -1
