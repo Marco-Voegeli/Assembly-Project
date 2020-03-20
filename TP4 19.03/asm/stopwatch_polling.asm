@@ -2,7 +2,6 @@
 .equ    LEDs, 0x2000
 .equ    TIMER, 0x2020
 .equ    BUTTON, 0x2030
-
 .equ    LFSR, RAM
 
 ; Variable initialization for spend_time
@@ -12,30 +11,38 @@ stw t0, LFSR(zero)
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING ABOVE THIS LINE
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-main:
+main:  ;5_000_000 clock cycles per 100ms
     addi sp, zero, 0x1BA0 ;to be checked
-    addi t0, zero,100 
-    stw t0, TIMER+4(zero) ;set period
-    addi t0, zero,11
-    stw t0, TIMER+8(zero); setting control 
 	addi a0, zero, 0
+reset_timer:
+    addi s0, zero, 0x4C4
+	slli s0, s0, 12
+	addi s0, s0, 0xB40 
 loop:
-    ldw t0, TIMER(zero) ; set time mesured in t0
-    beq t0,zero, counter
+	;Check Counter
+    beq s0,zero, counter
+	addi s0, s0, -25 ;Because in the loop we have 25 instructions
+	;Check Button
+	ldw t0, BUTTON + 4(zero)
+	andi t0, t0, 1
+	addi t1, zero, 1
+	beq t0, t1, call_spend_time	;How can we know if the period has run over board?
     jmpi loop
 counter:
-	addi sp, sp, -4
+	addi sp, sp, -4 ;Counter is already decrementing here...
 	stw a0, 0(sp)
 	call display
 	ldw a0, 0(sp)
-	addi sp, sp, 4
 	addi a0, a0, 1
-	addi t0, zero, 999
-	beq a0, t0, overflow
-	jmpi loop
-overflow:
-	addi a0, zero, 0
-	jmpi loop	  
+	addi sp, sp, 4
+	jmpi reset_timer	
+call_spend_time:
+	stw zero, BUTTON + 4 (zero)
+	addi a0, a0, 9 ;Because spend_time takes more than a second, about 0.1sec
+	stw a0, 0(sp)	
+	call spend_time
+	ldw a0, 0(sp)
+	jmpi loop  
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING BELOW THIS LINE
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

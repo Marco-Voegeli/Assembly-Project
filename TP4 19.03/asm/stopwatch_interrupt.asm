@@ -18,9 +18,97 @@ main:
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     ; WRITE YOUR CONSTANT DEFINITIONS AND main HERE
+.equ COUNTER, 0x10A0
 
+    addi	sp, zero, 0x1BA0 
+	stw		zero, COUNTER(zero)
+	addi	t0, zero, 1 ;Setting the Control Registers
+	wrctl 	ctl0, t0
+	addi 	t0, zero, 5 ;Setting the iactive bits
+	wrctl 	ctl3, t0
+    addi 	t0, zero, 0x4C4
+	slli 	t0, t0, 12
+	addi 	t0, t0, 0xB40
+;	addi 	t0, zero, 10
+    stw 	t0, TIMER+4(zero) ;set period
+    addi 	t0, zero,11
+    stw 	t0, TIMER+8(zero); setting control 
+loop:
+	jmpi	loop ;Infinite loop waiting for IRQ's
+	
 interrupt_handler:
-    ; WRITE YOUR INTERRUPT HANDLER HERE
+	; WRITE YOUR INTERRUPT HANDLER HERE
+	wrctl 	ctl0, zero
+;Stack 
+	addi	sp, sp, -36
+    stw		t0, 0(sp)
+    stw		t1, 4(sp)
+    stw 	t2, 8(sp)
+    stw 	t3, 12(sp)
+    stw     t4, 16(sp)
+	stw 	s0, 20(sp)
+	stw		s1, 24(sp)
+	stw 	s2, 28(sp)
+	stw 	s3, 32(sp)
+;Stack
+	rdctl 	t0, ctl4 ;Reading iPending
+	andi  	t1, t0, 4
+	addi 	t2, zero, 4
+	beq 	t1, t2, button_pressed ;if IRQ bit 2 is on
+	andi 	t0, t0, 1
+	addi 	t1, zero, 1
+	beq 	t0, t1, timer ;if IRQ bit 0 is on
+err_end:
+    ldw     t0, 0(sp)
+    ldw     t1, 4(sp)
+    ldw     t2, 8(sp)
+    ldw     t3, 12(sp)
+    ldw     t4, 16(sp)
+	ldw 	s0, 20(sp)
+	ldw 	s1, 24(sp)
+	ldw 	s2, 28(sp)
+	ldw 	s3, 32(sp)
+	addi	sp, sp, 36
+	addi 	ea, ea, -4
+	eret
+button_pressed:
+    ldw t0, BUTTON + 4(zero)
+;	stw t0, BUTTON + 4(zero) ;Removing the IRQ but not changing the edge capture
+	addi t1, zero, 1
+	beq t0, t1, button_0
+	jmpi but_end
+button_0:
+	addi t0, zero, 1
+	addi sp, sp, -4
+	stw ea, 0(sp) ;Storing ea register in stack
+	wrctl ctl0, t0 ;After storing the error address
+	call spend_time
+	ldw ea, 0(sp)
+	addi sp, sp, 4
+but_end:
+	stw zero, BUTTON + 4 (zero);resetting EDGE_CAPTURE here
+	wrctl ctl0, zero ;We are out of spend_time so we go back to no nested exceptions
+	jmpi err_end ;Check this maybe
+timer:
+    ldw t0, BUTTON + 4(zero)
+	andi t0, t0, 1 ;So it still works even if we have multiple buttons pressed
+	addi t1, zero, 1
+	beq t0, t1, timer_without_display
+	ldw a0, COUNTER(zero)
+	call display
+	ldw a0, COUNTER(zero) ;Incrementing the counter
+	addi a0, a0, 1
+	stw a0, COUNTER(zero)	
+	jmpi timer_end
+timer_without_display:
+	ldw t0, COUNTER(zero)
+	addi t0, t0, 1
+	stw t0, COUNTER(zero)
+timer_end:
+	ldw t0, TIMER + 12(zero);Resetting TO from status
+	xori t0, t0, 2
+	stw t0, TIMER + 12(zero)
+	jmpi err_end
 
 ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ; DO NOT CHANGE ANYTHING BELOW THIS LINE
