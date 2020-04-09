@@ -81,8 +81,8 @@ begin
         case s_addr is
             when "00" => s_rddata <= s_COUNTER;
             when "01" => s_rddata <= s_PERIOD;
-            when "10" => s_rddata(3 downto 0) <= "00" & s_ITO & s_CONT;
-            when "11" => s_rddata(1 downto 0) <= s_TO & s_RUN; 
+            when "10" => s_rddata <= (31 downto 2 => '0') & s_ITO & s_CONT;
+            when "11" => s_rddata <= (31 downto 2 => '0') & s_TO & s_RUN; --Changed this such that we set the complete rddata to 0 except for the last two bits
             when others => 
         end case;
 end process readProcess;

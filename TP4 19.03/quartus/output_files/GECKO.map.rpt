@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Thu Mar 19 17:26:12 2020
+Thu Apr 09 09:06:51 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,13 +68,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 19 17:26:12 2020       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 09 09:06:51 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,135                                       ;
-;     Total combinational functions  ; 2,971                                       ;
+; Total logic elements               ; 4,085                                       ;
+;     Total combinational functions  ; 2,921                                       ;
 ;     Dedicated logic registers      ; 1,459                                       ;
 ; Total registers                    ; 1459                                        ;
 ; Total pins                         ; 104                                         ;
@@ -239,16 +239,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,135     ;
+; Estimated Total logic elements              ; 4,085     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2971      ;
+; Total combinational functions               ; 2921      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1906      ;
-;     -- 3 input functions                    ; 743       ;
-;     -- <=2 input functions                  ; 322       ;
+;     -- 4 input functions                    ; 1957      ;
+;     -- 3 input functions                    ; 644       ;
+;     -- <=2 input functions                  ; 320       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2850      ;
+;     -- normal mode                          ; 2800      ;
 ;     -- arithmetic mode                      ; 121       ;
 ;                                             ;           ;
 ; Total registers                             ; 1459      ;
@@ -262,8 +262,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1523      ;
-; Total fan-out                               ; 16288     ;
-; Average fan-out                             ; 3.46      ;
+; Total fan-out                               ; 16191     ;
+; Average fan-out                             ; 3.48      ;
 +---------------------------------------------+-----------+
 
 
@@ -272,9 +272,9 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name             ; Library Name ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |GECKO                                              ; 2971 (180)          ; 1459 (0)                  ; 65536       ; 0            ; 0       ; 0         ; 104  ; 0            ; |GECKO                                                                                                                                              ; GECKO                   ; work         ;
+; |GECKO                                              ; 2921 (189)          ; 1459 (0)                  ; 65536       ; 0            ; 0       ; 0         ; 104  ; 0            ; |GECKO                                                                                                                                              ; GECKO                   ; work         ;
 ;    |ButToNs:buttons_0|                              ; 12 (12)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ButToNs:buttons_0                                                                                                                            ; ButToNs                 ; work         ;
-;    |CPU:cpu_0|                                      ; 2374 (2)            ; 1186 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0                                                                                                                                    ; CPU                     ; work         ;
+;    |CPU:cpu_0|                                      ; 2373 (2)            ; 1186 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0                                                                                                                                    ; CPU                     ; work         ;
 ;       |ALU:alu_0|                                   ; 638 (26)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|ALU:alu_0                                                                                                                          ; ALU                     ; work         ;
 ;          |add_sub:add_sub_0|                        ; 76 (76)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|ALU:alu_0|add_sub:add_sub_0                                                                                                        ; add_sub                 ; work         ;
 ;          |comparator:comparator_0|                  ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|ALU:alu_0|comparator:comparator_0                                                                                                  ; comparator              ; work         ;
@@ -283,7 +283,7 @@ refer to the applicable agreement for further details.
 ;          |shift_unit:shift_unit_0|                  ; 313 (313)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|ALU:alu_0|shift_unit:shift_unit_0                                                                                                  ; shift_unit              ; work         ;
 ;       |IR:IR_0|                                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|IR:IR_0                                                                                                                            ; IR                      ; work         ;
 ;       |PC:PC_0|                                     ; 43 (43)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|PC:PC_0                                                                                                                            ; PC                      ; work         ;
-;       |control_registers:control_registers_0|       ; 118 (118)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|control_registers:control_registers_0                                                                                              ; control_registers       ; work         ;
+;       |control_registers:control_registers_0|       ; 117 (117)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|control_registers:control_registers_0                                                                                              ; control_registers       ; work         ;
 ;       |controller:controller_0|                     ; 85 (85)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|controller:controller_0                                                                                                            ; controller              ; work         ;
 ;       |extend:extend_0|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|extend:extend_0                                                                                                                    ; extend                  ; work         ;
 ;       |mux2x16:mux_addr|                            ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:cpu_0|mux2x16:mux_addr                                                                                                                   ; mux2x16                 ; work         ;
@@ -305,8 +305,8 @@ refer to the applicable agreement for further details.
 ;             |altsyncram:altsyncram_component|       ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:rom_0|iD_S_b88a693_7e3412F0_e:ROM_inst|ROM_Block:iD_s_30739CAe_5A20DAf5_E|altsyncram:altsyncram_component                                ; altsyncram              ; work         ;
 ;                |altsyncram_rna1:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:rom_0|iD_S_b88a693_7e3412F0_e:ROM_inst|ROM_Block:iD_s_30739CAe_5A20DAf5_E|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ; altsyncram_rna1         ; work         ;
 ;    |decoder:decoder_0|                              ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|decoder:decoder_0                                                                                                                            ; decoder                 ; work         ;
-;    |timer:inst|                                     ; 146 (146)           ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|timer:inst                                                                                                                                   ; timer                   ; work         ;
-;    |uarT:uart_0|                                    ; 117 (117)           ; 75 (75)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|uarT:uart_0                                                                                                                                  ; uarT                    ; work         ;
+;    |timer:inst|                                     ; 85 (85)             ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|timer:inst                                                                                                                                   ; timer                   ; work         ;
+;    |uarT:uart_0|                                    ; 120 (120)           ; 75 (75)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|uarT:uart_0                                                                                                                                  ; uarT                    ; work         ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -352,36 +352,6 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------+--------------------------------------------------------------+------------------------+
 ; Latch Name                                                   ; Latch Enable Signal                                          ; Free of Timing Hazards ;
 +--------------------------------------------------------------+--------------------------------------------------------------+------------------------+
-; timer:inst|s_rddata[10]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[11]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[12]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[13]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[14]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[15]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[16]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[17]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[18]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[19]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[20]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[21]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[22]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[23]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[24]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[25]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[26]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[27]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[28]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[29]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[2]                                       ; timer:inst|Mux72                                             ; yes                    ;
-; timer:inst|s_rddata[30]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[31]                                      ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[3]                                       ; timer:inst|Mux72                                             ; yes                    ;
-; timer:inst|s_rddata[4]                                       ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[5]                                       ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[6]                                       ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[7]                                       ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[8]                                       ; timer:inst|s_addr[1]                                         ; yes                    ;
-; timer:inst|s_rddata[9]                                       ; timer:inst|s_addr[1]                                         ; yes                    ;
 ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[0]  ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[31] ; yes                    ;
 ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[10] ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[31] ; yes                    ;
 ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[11] ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[31] ; yes                    ;
@@ -414,7 +384,7 @@ Encoding Type:  One-Hot
 ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[7]  ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[31] ; yes                    ;
 ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[8]  ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[31] ; yes                    ;
 ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[9]  ; CPU:cpu_0|control_registers:control_registers_0|s_rddata[31] ; yes                    ;
-; Number of user-specified and inferred latches = 62           ;                                                              ;                        ;
+; Number of user-specified and inferred latches = 32           ;                                                              ;                        ;
 +--------------------------------------------------------------+--------------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -460,10 +430,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; uarT:uart_0|ID_s_1a7CA34c_5C892162_e          ; 4       ;
 ; ButToNs:buttons_0|Id_s_11620271_366f279f_e[1] ; 1       ;
 ; uarT:uart_0|ID_S_263dD911_4e14fC2_e[0]        ; 3       ;
-; uarT:uart_0|ID_S_263dD911_4e14fC2_e[1]        ; 2       ;
 ; ButToNs:buttons_0|Id_s_11620271_366f279f_e[2] ; 1       ;
-; uarT:uart_0|ID_S_263dD911_4e14fC2_e[2]        ; 2       ;
+; uarT:uart_0|ID_S_263dD911_4e14fC2_e[1]        ; 2       ;
 ; ButToNs:buttons_0|Id_s_11620271_366f279f_e[3] ; 1       ;
+; uarT:uart_0|ID_S_263dD911_4e14fC2_e[2]        ; 2       ;
 ; uarT:uart_0|ID_S_263dD911_4e14fC2_e[3]        ; 2       ;
 ; uarT:uart_0|ID_S_263dD911_4e14fC2_e[4]        ; 2       ;
 ; uarT:uart_0|ID_S_263dD911_4e14fC2_e[5]        ; 2       ;
@@ -493,23 +463,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |GECKO|CPU:cpu_0|PC:PC_0|cur_addr[5]                               ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |GECKO|timer:inst|s_COUNTER[27]                                    ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |GECKO|CPU:cpu_0|PC:PC_0|cur_addr[3]                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |GECKO|timer:inst|s_COUNTER[15]                                    ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |GECKO|uarT:uart_0|Id_s_37235a98_529Ef533_E[0]                     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |GECKO|uarT:uart_0|id_s_66EdceCE_74761131_e[4]                     ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |GECKO|uarT:uart_0|ID_s_5abE1D0_43cea0b4_E[5]                      ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |GECKO|uarT:uart_0|ID_S_263dD911_4e14fC2_e[4]                      ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |GECKO|uarT:uart_0|ID_S_30F74393_70A0fFf0_e[4]                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |GECKO|timer:inst|Mux71                                            ;
-; 8:1                ; 29 bits   ; 145 LEs       ; 58 LEs               ; 87 LEs                 ; No         ; |GECKO|CPU:cpu_0|control_registers:control_registers_0|s_rddata[3] ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |GECKO|CPU:cpu_0|control_registers:control_registers_0|s_rddata[1] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |GECKO|uarT:uart_0|id_s_66EdceCE_74761131_e[15]                    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |GECKO|uarT:uart_0|ID_s_5abE1D0_43cea0b4_E[2]                      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |GECKO|uarT:uart_0|ID_S_263dD911_4e14fC2_e[2]                      ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |GECKO|uarT:uart_0|ID_S_30F74393_70A0fFf0_e[7]                     ;
+; 8:1                ; 29 bits   ; 145 LEs       ; 58 LEs               ; 87 LEs                 ; No         ; |GECKO|CPU:cpu_0|control_registers:control_registers_0|s_rddata[9] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |GECKO|CPU:cpu_0|control_registers:control_registers_0|s_rddata[0] ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |GECKO|uarT:uart_0|Selector29                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |GECKO|uarT:uart_0|Selector25                                      ;
-; 9:1                ; 24 bits   ; 144 LEs       ; 96 LEs               ; 48 LEs                 ; No         ; |GECKO|rddata[17]                                                  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |GECKO|uarT:uart_0|Selector27                                      ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |GECKO|uarT:uart_0|Selector30                                      ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |GECKO|uarT:uart_0|Selector24                                      ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[7]                                                   ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[2]                                                   ;
+; 12:1               ; 24 bits   ; 192 LEs       ; 120 LEs              ; 72 LEs                 ; No         ; |GECKO|rddata[9]                                                   ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[7]                                                   ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |GECKO|rddata[3]                                                   ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[0]                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
@@ -2428,20 +2397,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR                          ; 291          ;
 ;     ENA CLR SLD                      ; 62           ;
 ;     plain                            ; 2            ;
-; cycloneiii_lcell_comb                ; 744          ;
+; cycloneiii_lcell_comb                ; 694          ;
 ;     arith                            ; 88           ;
 ;         2 data inputs                ; 68           ;
 ;         3 data inputs                ; 20           ;
-;     normal                           ; 656          ;
+;     normal                           ; 606          ;
 ;         0 data inputs                ; 1            ;
 ;         1 data inputs                ; 22           ;
-;         2 data inputs                ; 153          ;
-;         3 data inputs                ; 206          ;
-;         4 data inputs                ; 274          ;
+;         2 data inputs                ; 151          ;
+;         3 data inputs                ; 107          ;
+;         4 data inputs                ; 325          ;
 ; cycloneiii_ram_block                 ; 64           ;
 ;                                      ;              ;
 ; Max LUT depth                        ; 5.10         ;
-; Average LUT depth                    ; 2.55         ;
+; Average LUT depth                    ; 2.54         ;
 +--------------------------------------+--------------+
 
 
@@ -2450,7 +2419,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -2460,7 +2429,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 19 17:25:50 2020
+    Info: Processing started: Thu Apr 09 09:06:34 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2566,37 +2535,6 @@ Info (12128): Elaborating entity "extend" for hierarchy "CPU:cpu_0|extend:extend
 Info (12128): Elaborating entity "PC" for hierarchy "CPU:cpu_0|PC:PC_0"
 Info (12128): Elaborating entity "mux2x16" for hierarchy "CPU:cpu_0|mux2x16:mux_addr"
 Info (12128): Elaborating entity "timer" for hierarchy "timer:inst"
-Warning (10631): VHDL Process Statement warning at timer.vhd(79): inferring latch(es) for signal or variable "s_rddata", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[2]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[3]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[4]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[5]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[6]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[7]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[8]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[9]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[10]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[11]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[12]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[13]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[14]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[15]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[16]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[17]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[18]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[19]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[20]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[21]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[22]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[23]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[24]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[25]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[26]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[27]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[28]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[29]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[30]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-Info (10041): Inferred latch for "s_rddata[31]" at timer.vhd(79) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
 Info (12128): Elaborating entity "ButToNs" for hierarchy "ButToNs:buttons_0"
 Info (12128): Elaborating entity "ROM" for hierarchy "ROM:rom_0"
 Info (12128): Elaborating entity "iD_S_b88a693_7e3412F0_e" for hierarchy "ROM:rom_0|iD_S_b88a693_7e3412F0_e:ROM_inst" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/ROM.vhd Line: 1
@@ -2682,10 +2620,6 @@ Info (12133): Instantiated megafunction "RAM:ram_0|ID_S_B88a4C5_7E3415Ff_e:ram_i
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vh41.tdf
     Info (12023): Found entity 1: altsyncram_vh41 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/quartus/db/altsyncram_vh41.tdf Line: 27
-Warning (13012): Latch timer:inst|s_rddata[2] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal timer:inst|s_addr[1] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 41
-Warning (13012): Latch timer:inst|s_rddata[3] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 79
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal timer:inst|s_addr[1] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/timer.vhd Line: 41
 Warning (13012): Latch CPU:cpu_0|control_registers:control_registers_0|s_rddata[0] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/control_registers.vhd Line: 58
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:cpu_0|IR_0.Q[8]
 Warning (13012): Latch CPU:cpu_0|control_registers:control_registers_0|s_rddata[10] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/vhdl/control_registers.vhd Line: 58
@@ -2758,15 +2692,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Info (35003): Optimize away 3 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "CPU:cpu_0|mux2x16:mux_addr|o[0]" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/quartus/mux2x16.qxp Line: -1
     Info (35004): Node: "CPU:cpu_0|mux2x16:mux_addr|o[1]" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP4 19.03/quartus/mux2x16.qxp Line: -1
-Info (21057): Implemented 4434 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4384 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 97 output pins
-    Info (21061): Implemented 4266 logic cells
+    Info (21061): Implemented 4216 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 104 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Thu Mar 19 17:26:12 2020
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 99 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Thu Apr 09 09:06:51 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:28
 
 

@@ -57,7 +57,7 @@ interrupt_handler:
 	beq 	t1, t2, button_pressed ;if IRQ bit 2 is on
 	andi 	t0, t0, 1
 	addi 	t1, zero, 1
-	beq 	t0, t1, timer ;if IRQ bit 0 is on
+	beq 	t0, t1, timer_increment ;if IRQ bit 0 is on
 err_end:
     ldw     t0, 0(sp)
     ldw     t1, 4(sp)
@@ -97,7 +97,7 @@ button_0:
 but_end:
  ;We are out of spend_time so we go back to no nested exceptions
 	jmpi err_end ;Check this maybe
-timer:
+timer_increment:
 	ldw t0, B_PRESSED(zero)
 	addi t1, zero, 1
 	beq t0, t1, timer_without_display
