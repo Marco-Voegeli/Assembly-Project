@@ -1,3 +1,95 @@
 m255
+K4
+z0
 13
 cModel Technology
+Earith_unit
+Z0 w1587720415
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/modelsim
+8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd
+FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd
+l0
+L5
+V]j:Z2lgLC8T`YNahi7nUT1
+!s100 L]MBi@k0OKXoVf_^WS=h]1
+Z5 OV;C;10.5b;63
+32
+Z6 !s110 1587721866
+!i10b 1
+Z7 !s108 1587721866.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd|
+!s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd|
+!i113 1
+o-work work -2002 -explicit
+Z8 tExplicit 1 CvgOpt 0
+Emultiplier
+w1587721861
+R1
+R2
+R3
+R4
+8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
+FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
+l0
+L9
+VRAIWnWV=gWSzT[^A9>Z=@1
+!s100 ELoc2n9_0nkzjEfHgW<_60
+R5
+32
+R6
+!i10b 1
+R7
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
+!s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
+!i113 1
+Z9 !s102 -cover s
+Z10 o-work work -2002 -explicit -cover s
+R8
+Emultiplier_tb
+R0
+Z11 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z12 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
+Z13 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
+l0
+L7
+VU;;Fz;^R<kMT>OON?e@gC3
+!s100 Z_OJlIYz1NhbUQlXe^X]^1
+R5
+32
+Z14 !s110 1587720485
+!i10b 1
+Z15 !s108 1587720485.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
+Z17 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
+!i113 1
+R9
+R10
+R8
+Abench
+R11
+R1
+R2
+R3
+DEx4 work 13 multiplier_tb 0 22 U;;Fz;^R<kMT>OON?e@gC3
+l21
+L10
+V79DlMI2jz@<S>>Tio=Xi83
+!s100 zngPU^5>e4P1Y97Ei9lEQ0
+R5
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10
+R8

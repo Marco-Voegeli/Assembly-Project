@@ -18,14 +18,14 @@ architecture combinatorial of multiplier is
 
 begin
 
-    add_01 = (A(0) AND B) + ((A(1) AND B) & "0");
-    add_02 = (A(2) AND B) + ((A(3) AND B) & "0");
-    add_03 = (A(4) AND B) + ((A(5) AND B) & "0");
-    add_04 = (A(6) AND B) + ((A(7) AND B) & "0");
-    add_05 = add_01 + (add_02 & "00");
-    add_06 = add_03 + (add_04 & "00");
-    add_07 = add_05 + (add_06 & "0000");
-    P <= add_07
+    add_01 <= '0' & ((7 downto 0 => A(0)) AND B) OR (((7 downto 0 => A(0)) AND B) & "0");
+    add_02 <= ('0' &(7 downto 0 => A(2)) AND B) OR (((7 downto 0 => A(3)) AND B) & "0");
+    add_03 <= ('0' &(7 downto 0 => A(4)) AND B) OR (((7 downto 0 => A(5)) AND B) & "0");
+    add_04 <= ('0' &(7 downto 0 => A(6)) AND B) OR (((7 downto 0 => A(7)) AND B) & "0");
+    add_05 <= add_01 + (add_02 & "00");
+    add_06 <= add_03 + (add_04 & "00");
+    add_07 <= add_05 + (add_06 & "0000");
+    P <= add_07;
 
 end combinatorial;
 
