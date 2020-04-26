@@ -1,0 +1,44 @@
+../testbench/multiplier_tb.vhd {1 {vcom -work work -2002 -explicit -cover s -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity multiplier_tb
+-- Compiling architecture bench of multiplier_tb
+
+} {} {}} ../vhdl/arith_unit.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity arith_unit
+-- Compiling architecture combinatorial of arith_unit
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd(44): near "begin": syntax error
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd(54): near "B": (vcom-1576) expecting ',' or ')'.
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd(57): Statement cannot be labeled.
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd(60): near "B": (vcom-1576) expecting ',' or ')'.
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd(72): near "end": (vcom-1576) expecting ';'.
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd(82): near "out": syntax error
+
+} {9.0 15.0} {}} ../vhdl/multiplier.vhd {0 {vcom -work work -2002 -explicit -cover s -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity multiplier
+-- Compiling architecture combinatorial of multiplier
+** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(21): (vcom-1275) Arguments of overloaded "or" operator are not the same length (8 vs. 9).
+** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(22): (vcom-1275) Arguments of overloaded "or" operator are not the same length (8 vs. 9).
+** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(23): (vcom-1275) Arguments of overloaded "or" operator are not the same length (8 vs. 9).
+** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(24): (vcom-1275) Arguments of overloaded "or" operator are not the same length (8 vs. 9).
+** Error (suppressible): C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(25): (vcom-1272) Length of expected is 8; length of actual is 10.
+** Error (suppressible): C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(26): (vcom-1272) Length of expected is 8; length of actual is 10.
+** Error (suppressible): C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(27): (vcom-1272) Length of expected is 8; length of actual is 12.
+** Error (suppressible): C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(28): (vcom-1272) Length of expected is 16; length of actual is 8.
+** Error: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd(30): VHDL Compiler exiting
+
+} {17.0 18.0} {}}
