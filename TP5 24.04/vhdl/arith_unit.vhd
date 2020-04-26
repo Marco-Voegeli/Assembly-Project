@@ -33,41 +33,37 @@ architecture combinatorial of arith_unit is
         );
     end component;
 
-    signal temp_P01:  unsigned(15 downto 0);
     signal mux01, mux02 :  unsigned(7 downto 0);
-    signal mux03, mux04, mux05, BC_PLUS_A, MUX03_PLUS_B, TWO_A: unsigned(15 downto 0);
-    signal mux06, temp_P02, temp_P03:  unsigned(31 downto 0);
-
-begin
-
-    
+    signal mux03, mux04, mux05, BC_PLUS_A, MUX03_PLUS_B, TWO_A: unsigned(31 downto 0);
+    signal mux06, temp_P01, temp_P02, temp_P03:  unsigned(31 downto 0);
+  
 begin
     mul01 : multiplier
     PORT MAP(
-        A => mux01
-        B => mux02
-        P => temp_P01); --GIVES A^2 OR BC
+        A => mux01,
+        B => mux02,
+        P => temp_P01(15 downto 0)); --GIVES A^2 OR BC
 
     mul02 : multiplier16
     PORT MAP(
-        A => mux04
-        B => temp_P01
+        A => mux04(15 downto 0),
+        B => temp_P01(15 downto 0),    
         P => temp_P02); --GIVES A^4 OR BC(BC+A+B)
 
     mul03 : multiplier16
         PORT MAP(
-            A => MUX03_PLUS_B
-            B => MUX03_PLUS_B
+            A => MUX03_PLUS_B(15 downto 0),
+            B => MUX03_PLUS_B(15 downto 0),
             P => temp_P03); --GIVES (2A+B)^2
 
     mux01 <= A WHEN (sel = '1') ELSE B;  -- A OR B
     mux02 <= A WHEN (sel = '1') ELSE C;  -- A OR C
     BC_PLUS_A <= temp_P01 + A; --first addition BC + A
-    TWO_A <= A & "00"; -- 2A
+    TWO_A <= (31 downto 10 => '0') & A & "00"; -- 2A
     mux03 <= TWO_A WHEN (sel = '1') ELSE BC_PLUS_A;  -- BC+A OR 2A
     MUX03_PLUS_B <= mux03 + B ; --second addition BC+A+B OR 2A+B
     mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
-    mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02 -- A^4+(2A+B)^2 OR BC(BC+B+A)
+    mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
 
 end combinatorial;
 

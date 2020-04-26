@@ -14,18 +14,30 @@ entity multiplier is
 end multiplier;
 
 architecture combinatorial of multiplier is
-    signal add_01,add_02,add_03,add_04,add_05,add_06,add_07 : unsigned(7 downto 0);
-
+signal s_b_ext : unsigned(15 downto 0);
+signal s_add_0, s_add_01, s_add_02, s_add_03, s_add_04, s_add_05, s_add_06, s_add_07 : unsigned(15 downto 0);
+signal s_A_0,s_A_1,s_A_2,s_A_3 : unsigned(15 downto 0);
+signal s_B_0,s_B_1 : unsigned(15 downto 0);
 begin
+    s_b_ext <= (15 downto 8 => '0') & B;
+    s_add_0 <= (15 downto 0 => A(0)) AND s_b_ext;
+    s_add_01 <= (15 downto 0 => A(1)) AND s_b_ext;
+    s_add_02 <= (15 downto 0 => A(2)) AND s_b_ext;
+    s_add_03 <= (15 downto 0 => A(3)) AND s_b_ext;
+    s_add_04 <= (15 downto 0 => A(4)) AND s_b_ext;
+    s_add_05 <= (15 downto 0 => A(5)) AND s_b_ext;
+    s_add_06 <= (15 downto 0 => A(6)) AND s_b_ext;
+    s_add_07 <= (15 downto 0 => A(7)) AND s_b_ext;
+    
+    s_A_0 <= s_add_0 + (s_add_01(14 downto 0) & '0');
+    s_A_1 <= s_add_02 + (s_add_03(14 downto 0) & '0');
+    s_A_2 <= s_add_04 + (s_add_05(14 downto 0) & '0');
+    s_A_3 <= s_add_06 + (s_add_07(14 downto 0) & '0');
 
-    add_01 <= '0' & ((7 downto 0 => A(0)) AND B) OR (((7 downto 0 => A(0)) AND B) & "0");
-    add_02 <= ('0' &(7 downto 0 => A(2)) AND B) OR (((7 downto 0 => A(3)) AND B) & "0");
-    add_03 <= ('0' &(7 downto 0 => A(4)) AND B) OR (((7 downto 0 => A(5)) AND B) & "0");
-    add_04 <= ('0' &(7 downto 0 => A(6)) AND B) OR (((7 downto 0 => A(7)) AND B) & "0");
-    add_05 <= add_01 + (add_02 & "00");
-    add_06 <= add_03 + (add_04 & "00");
-    add_07 <= add_05 + (add_06 & "0000");
-    P <= add_07;
+    s_B_0 <= s_A_0 + (s_A_1(13 downto 0) & "00");
+    s_B_1 <= s_A_2 + (s_A_3(13 downto 0) & "00");
+    
+    P <= s_B_0 + (s_B_1(11 downto 0) & "0000");
 
 end combinatorial;
 
@@ -54,34 +66,35 @@ architecture combinatorial of multiplier16 is
         );
     end component;
 
-    signal temp_P01,temp_P02,temp_P03,temp_P04:  unsigned(15 downto 0);
+    signal s_lsb,s_msb,s_lsb8,s_msb8, s_mid, s_upper:  unsigned(31 downto 0);
 
 begin
-    8LSB_LSB_MUL : multiplier
+    LSB8_LSB_MUL : multiplier
     PORT MAP(
-        A => A(7 downto 0)
-        B => B(7 downto 0);
-        P => temp_P01);
+        A => A(7 downto 0),
+        B => B(7 downto 0),
+        P => s_lsb(15 downto 0)
+);
 
-    8MSB_MSB_MUL : multiplier
+    MSB8_MSB_MUL : multiplier
     PORT MAP(
-        A => A(15 downto 8)
-        B => B(15 downto 8);
-        P => temp_P02);
+        A => A(15 downto 8),
+        B => B(15 downto 8),
+        P => s_msb8(15 downto 0));
 
-    8LSB_MSB_MUL : multiplier
+    LSB8_MSB_MUL : multiplier
     PORT MAP(
-        A => A(7 downto 0)
-        B => B(15 downto 8);
-        P => temp_P03);
+        A => A(7 downto 0),
+        B => B(15 downto 8),
+        P => s_lsb8(15 downto 0));
 
-    8MSB__LSB_ MUL : multiplier
+    MSB8_LSB_MUL : multiplier
     PORT MAP(
-        A => A(15 downto 8)
-        B => B(7 downto 0);
-        P => temp_P04);
-    
-    P <= temp_P01 + ((temp_P02 + temp_P03) & "00000000") + (temp_P04 & "0000000000000000");
+        A => A(15 downto 8),
+        B => B(7 downto 0),
+        P => s_msb(15 downto 0));
+    s_mid <= s_msb8 + s_lsb8;
+    P <= s_lsb + (s_mid(23 downto 0) & (7 downto 0 => '0')) + (s_msb(15 downto 0) & (15 downto 0 => '0'));
 
 end combinatorial;
 
