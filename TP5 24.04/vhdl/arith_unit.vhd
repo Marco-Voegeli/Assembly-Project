@@ -59,7 +59,7 @@ begin
     mux01 <= A WHEN (sel = '1') ELSE B;  -- A OR B
     mux02 <= A WHEN (sel = '1') ELSE C;  -- A OR C
     BC_PLUS_A <= temp_P01 + A; --first addition BC + A
-    TWO_A <= (31 downto 10 => '0') & A & "00"; -- 2A
+    TWO_A <= (31 downto 10 => '0') & A & "0"; -- 2A Changed to only one 0 instead of two
     mux03 <= TWO_A WHEN (sel = '1') ELSE BC_PLUS_A;  -- BC+A OR 2A
     MUX03_PLUS_B <= mux03 + B ; --second addition BC+A+B OR 2A+B
     mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
