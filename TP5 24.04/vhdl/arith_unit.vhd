@@ -132,9 +132,7 @@ architecture one_stage_pipeline of arith_unit is
             mux03_n <= mux03;
             temp_P01_n <= temp_P01;
         end if;
-
-        
-            
+ 
         mux01 <= A WHEN (sel = '1') ELSE B;  -- A OR B
         mux02 <= A WHEN (sel = '1') ELSE C;  -- A OR C
         BC_PLUS_A <= temp_P01 + A; --first addition BC + A
