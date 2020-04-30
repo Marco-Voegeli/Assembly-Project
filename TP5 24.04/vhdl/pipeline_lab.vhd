@@ -72,8 +72,8 @@ begin
     -------------------------
     -- The arithmetic unit --
     -------------------------
-    ArithmeticUnit : entity work.arith_unit(combinatorial) port map(
-    -- ArithmeticUnit : entity work.arith_unit(one_stage_pipeline) port map(
+   -- ArithmeticUnit : entity work.arith_unit(combinatorial) port map(
+ArithmeticUnit : entity work.arith_unit(one_stage_pipeline) port map(
     -- ArithmeticUnit : entity work.arith_unit(two_stage_pipeline_1) port map(
     -- ArithmeticUnit : entity work.arith_unit(two_stage_pipeline_2) port map(
             clk     => pipeline_clk,

@@ -65,6 +65,7 @@ begin
     mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
     mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
 
+    start <= done;
 end combinatorial;
 
 -- =============================================================================
