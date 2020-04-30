@@ -87,7 +87,50 @@ architecture one_stage_pipeline of arith_unit is
         );
     end component;
 
-begin
+    signal mux06, temp_P01,temp_P01_n, temp_P02, temp_P03:  unsigned(31 downto 0);
+    signal mux01, mux02,B_n :  unsigned(7 downto 0);
+    signal mux03,mux03_n, mux04, mux05, BC_PLUS_A, MUX03_PLUS_B, TWO_A: unsigned(31 downto 0);
+  
+    begin
+        mul01 : multiplier
+        PORT MAP(
+            A => mux01,
+            B => mux02,
+            P => temp_P01(15 downto 0)); --GIVES A^2 OR BC
+    
+        mul02 : multiplier16
+        PORT MAP(
+            A => mux04(15 downto 0),
+            B => temp_P01_n(15 downto 0),    
+            P => temp_P02); --GIVES A^4 OR BC(BC+A+B)
+    
+        mul03 : multiplier16
+            PORT MAP(
+                A => MUX03_PLUS_B(15 downto 0),
+                B => MUX03_PLUS_B(15 downto 0),
+                P => temp_P03); --GIVES (2A+B)^2
+
+
+        if(rising_edge(clk)) then
+            temp_P01_n <= temp_P01;
+            B_n <= B;
+            mux03_n <= mux03
+        end if;
+        if (reset_n = '0') then
+        end if;
+        
+            
+        mux01 <= A WHEN (sel = '1') ELSE B;  -- A OR B
+        mux02 <= A WHEN (sel = '1') ELSE C;  -- A OR C
+        BC_PLUS_A <= temp_P01_n + A; --first addition BC + A
+        TWO_A <= (31 downto 10 => '0') & A & "0"; -- 2A Changed to only one 0 instead of two
+        mux03 <= TWO_A WHEN (sel = '1') ELSE BC_PLUS_A;  -- BC+A OR 2A
+        MUX03_PLUS_B <= mux03_n + B_n ; --second addition BC+A+B OR 2A+B
+        mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
+        mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
+    
+        done <= start;
+
 end one_stage_pipeline;
 
 -- =============================================================================
