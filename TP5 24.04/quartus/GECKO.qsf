@@ -25,7 +25,7 @@
 
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:08:28  JANUARY 29, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name TOP_LEVEL_ENTITY GECKO
 set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
