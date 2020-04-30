@@ -65,7 +65,7 @@ begin
     mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
     mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
     D <= mux06;
-    start <= done;
+    done <= start;
 end combinatorial;
 
 -- =============================================================================
@@ -110,6 +110,8 @@ architecture one_stage_pipeline of arith_unit is
                 B => MUX03_PLUS_B(15 downto 0),
                 P => temp_P03); --GIVES (2A+B)^2
 
+        main: process(reset_n, clk)
+        begin
         if (reset_n = '0') then
             mux06 <= (31 downto 0 => '0');
             temp_P01 <=(31 downto 0 => '0');
@@ -131,7 +133,9 @@ architecture one_stage_pipeline of arith_unit is
             B_n <= B;
             mux03_n <= mux03;
             temp_P01_n <= temp_P01;
+            done <= start;
         end if;
+        end process main;
  
         mux01 <= A WHEN (sel = '1') ELSE B;  -- A OR B
         mux02 <= A WHEN (sel = '1') ELSE C;  -- A OR C
@@ -142,7 +146,7 @@ architecture one_stage_pipeline of arith_unit is
         mux04 <= temp_P01_n WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
         mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
         D <= mux06;
-        done <= start;
+        
 
 end one_stage_pipeline;
 
