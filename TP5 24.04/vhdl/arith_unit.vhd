@@ -64,7 +64,7 @@ begin
     MUX03_PLUS_B <= mux03 + B ; --second addition BC+A+B OR 2A+B
     mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
     mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
-
+    D <= mux06;
     start <= done;
 end combinatorial;
 
@@ -110,25 +110,40 @@ architecture one_stage_pipeline of arith_unit is
                 B => MUX03_PLUS_B(15 downto 0),
                 P => temp_P03); --GIVES (2A+B)^2
 
-
-        if(rising_edge(clk)) then
-            temp_P01_n <= temp_P01;
-            B_n <= B;
-            mux03_n <= mux03
-        end if;
         if (reset_n = '0') then
+            mux06 <= (31 downto 0 => '0');
+            temp_P01 <=(31 downto 0 => '0');
+            temp_P01_n <=(31 downto 0 => '0');
+            temp_P02 <=(31 downto 0 => '0');
+            temp_P03 <=(31 downto 0 => '0');
+            mux01 <= (7 downto 0 => '0');
+            mux02 <= (7 downto 0 => '0');
+            B_n  <= (7 downto 0 => '0');
+            mux03  <= (31 downto 0 => '0');
+            mux03_n <= (31 downto 0 => '0');
+            mux04 <= (31 downto 0 => '0');
+            mux05 <= (31 downto 0 => '0');
+            BC_PLUS_A <= (31 downto 0 => '0');
+            MUX03_PLUS_B <= (31 downto 0 => '0');
+            TWO_A <= (31 downto 0 => '0');
         end if;
+        if(rising_edge(clk)) then
+            B_n <= B;
+            mux03_n <= mux03;
+            temp_P01_n <= temp_P01;
+        end if;
+
         
             
         mux01 <= A WHEN (sel = '1') ELSE B;  -- A OR B
         mux02 <= A WHEN (sel = '1') ELSE C;  -- A OR C
-        BC_PLUS_A <= temp_P01_n + A; --first addition BC + A
+        BC_PLUS_A <= temp_P01 + A; --first addition BC + A
         TWO_A <= (31 downto 10 => '0') & A & "0"; -- 2A Changed to only one 0 instead of two
         mux03 <= TWO_A WHEN (sel = '1') ELSE BC_PLUS_A;  -- BC+A OR 2A
         MUX03_PLUS_B <= mux03_n + B_n ; --second addition BC+A+B OR 2A+B
-        mux04 <= temp_P01 WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
+        mux04 <= temp_P01_n WHEN (sel = '1') ELSE MUX03_PLUS_B; --BC+A+B OR A^2
         mux06 <= temp_P03 + temp_P02 WHEN (sel = '1') ELSE temp_P02; -- A^4+(2A+B)^2 OR BC(BC+B+A)
-    
+        D <= mux06;
         done <= start;
 
 end one_stage_pipeline;
