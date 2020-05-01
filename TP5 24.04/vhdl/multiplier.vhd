@@ -125,5 +125,48 @@ architecture pipeline of multiplier16_pipeline is
         );
     end component;
 
+    signal s_lsb,s_msb,s_lsb8,s_msb8, s_mid, s_upper, s_lsb_n, s_msb_n:  unsigned(31 downto 0);
+
 begin
+    LSB8_LSB_MUL : multiplier
+    PORT MAP(
+        A => A(7 downto 0),
+        B => B(7 downto 0),
+        P => s_lsb(15 downto 0)
+);
+
+    MSB8_MSB_MUL : multiplier
+    PORT MAP(
+        A => A(15 downto 8),
+        B => B(15 downto 8),
+        P => s_msb8(15 downto 0));
+
+    LSB8_MSB_MUL : multiplier
+    PORT MAP(
+        A => A(7 downto 0),
+        B => B(15 downto 8),
+        P => s_lsb8(15 downto 0));
+
+    MSB8_LSB_MUL : multiplier
+    PORT MAP(
+        A => A(15 downto 8),
+        B => B(7 downto 0),
+        P => s_msb(15 downto 0));
+    
+main : process(clk, reset_n)
+    begin
+        if(reset_n = '0') then
+        s_lsb_n <= (31 downto 0 => '0');
+        s_msb_n <= (31 downto 0 => '0');
+        else
+            if(rising_edge(clk)) then
+                s_lsb_n <= s_lsb + (s_mid(23 downto 0) & (7 downto 0 => '0'));
+                s_msb_n <= (s_msb(15 downto 0) & (15 downto 0 => '0'));
+            end if;
+        end if;
+
+end process main;
+    s_mid <= s_msb8 + s_lsb8;
+    --P <= s_lsb + (s_mid(23 downto 0) & (7 downto 0 => '0')) + (s_msb(15 downto 0) & (15 downto 0 => '0'));
+    P <= s_lsb_n + s_msb_n;
 end pipeline;
