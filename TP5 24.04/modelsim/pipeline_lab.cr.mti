@@ -8,6 +8,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity multiplier_tb
 -- Compiling architecture bench of multiplier_tb
 
+} {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity arith_unit_tb
+-- Compiling architecture bench of arith_unit_tb
+
 } {} {}} ../vhdl/multiplier.vhd {1 {vcom -work work -2002 -explicit -cover s -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -20,20 +30,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture combinatorial of multiplier16
 -- Compiling entity multiplier16_pipeline
 -- Compiling architecture pipeline of multiplier16_pipeline
-
-} {} {}} ../vhdl/arith_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity arith_unit
--- Compiling architecture combinatorial of arith_unit
--- Compiling architecture one_stage_pipeline of arith_unit
--- Loading entity arith_unit
--- Compiling architecture two_stage_pipeline_1 of arith_unit
--- Loading entity arith_unit
--- Compiling architecture two_stage_pipeline_2 of arith_unit
--- Loading entity arith_unit
 
 } {} {}}
