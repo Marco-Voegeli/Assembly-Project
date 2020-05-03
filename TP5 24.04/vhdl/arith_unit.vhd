@@ -35,7 +35,7 @@ architecture combinatorial of arith_unit is
 
     signal mux01, mux02 :  unsigned(7 downto 0);
     signal mux03, mux04, mux06, BC_PLUS_A, MUX03_PLUS_B, TWO_A: unsigned(31 downto 0);
-    signal temp_P02, temp_P03:  unsigned(31 downto 0);
+    signal temp_P02, temp_P03 :  unsigned(31 downto 0);
     signal temp_P01 : unsigned(15 downto 0);
 begin
     mul01 : multiplier
@@ -67,3 +67,5 @@ begin
     D <= mux06;
     done <= start;
 end combinatorial;
+
+

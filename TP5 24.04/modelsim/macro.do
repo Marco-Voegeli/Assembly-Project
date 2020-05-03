@@ -1,7 +1,7 @@
 restart
-force A 11111111
-force B 11111111
-force C 11111111
+force A 11110000
+force B 11110000
+force C 00000000
 force start 1
 force sel 1
 force reset_n 0 0, 1 5

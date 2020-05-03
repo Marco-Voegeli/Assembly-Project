@@ -4,7 +4,7 @@ z0
 13
 cModel Technology
 Earith_unit
-Z0 w1588332890
+Z0 w1588525648
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -17,9 +17,9 @@ V]j:Z2lgLC8T`YNahi7nUT1
 !s100 L]MBi@k0OKXoVf_^WS=h]1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1588332895
+Z8 !s110 1588526757
 !i10b 1
-Z9 !s108 1588332895.000000
+Z9 !s108 1588526757.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd|
 Z11 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd|
 !i113 1
@@ -32,8 +32,8 @@ R3
 Z14 DEx4 work 10 arith_unit 0 22 ]j:Z2lgLC8T`YNahi7nUT1
 l40
 L21
-Z15 VJ7J;6@KBH??0>elm@W8Fj0
-Z16 !s100 kA:PG2;0GhbmP26HG>0V70
+Vlm[1nZTGmHZEcDac4eTCL1
+!s100 ReA^72>eb`4HZ1<DX4BH:0
 R7
 32
 R8
@@ -49,126 +49,126 @@ R1
 R2
 R3
 R14
-l236
-L215
-VKnAdzZ3F>QiI[oK5CESRm2
-!s100 :2=IGCH=4=EG:ek1j70LW2
+l237
+L216
+VQZ]?mEm@7jBmdf_g<J]d62
+!s100 NGmA@z8>=ZjJ4F<fQK]Hd0
 R7
 32
-Z17 !s110 1588332702
+Z15 !s110 1588524632
 !i10b 1
-Z18 !s108 1588332702.000000
+Z16 !s108 1588524631.000000
 R10
 R11
 !i113 1
 R12
 R13
-Z19 w1588332700
+Z17 w1588523989
 Atwo_stage_pipeline_1
 R1
 R2
 R3
 R14
-l162
-L144
-Vk@i?0QV:Rl:Y6ePNh>5II2
-!s100 S46m`9_9I`aJSgJMEIeI@0
+l163
+L145
+V6:b`HYgl6P@5ZC^Q=nbTV3
+!s100 M8?Y@9IYPkm7_KRlb35]W3
 R7
 32
-R17
+R15
 !i10b 1
-R18
+R16
 R10
 R11
 !i113 1
 R12
 R13
-R19
+R17
 Aone_stage_pipeline
 R1
 R2
 R3
 R14
-l94
-L75
-V3BWkPEaVf2a?cmbal^@Lk3
-!s100 cmEc^:VdY>MQ017cHU03S0
+l95
+L76
+VM0EfzASAbZPNF7dD1MVD?3
+!s100 R9d]R<GVgj;dZlF:POgPJ1
 R7
 32
-R17
+!s110 1588524631
 !i10b 1
-R18
+R16
 R10
 R11
 !i113 1
 R12
 R13
-R19
+R17
 Earith_unit_tb
-Z20 w1588324900
-Z21 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z18 w1588324900
+Z19 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
 R4
-Z22 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl
-Z23 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl
+Z20 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl
+Z21 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl
 l0
 L7
 VS=S;_<nQF>DozCX?BZ_l72
 !s100 baWTVODXjWTcf<m4:1Cbm3
 R7
 32
-Z24 !s110 1588324903
+R8
 !i10b 1
-Z25 !s108 1588324903.000000
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl|
-Z27 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl|
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl|
+Z23 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/arith_unit_tb.vhdl|
 !i113 1
 R12
 R13
 Abench
-R21
+R19
 R1
 R2
 R3
-DEx4 work 13 arith_unit_tb 0 22 S=S;_<nQF>DozCX?BZ_l72
+Z24 DEx4 work 13 arith_unit_tb 0 22 S=S;_<nQF>DozCX?BZ_l72
 l28
 L10
-VolbdVN]0:Cjg[^@Mc2XWJ2
-!s100 aXam7_?Ig^mKHUL=R[W[T3
+Z25 VolbdVN]0:Cjg[^@Mc2XWJ2
+Z26 !s100 aXam7_?Ig^mKHUL=R[W[T3
 R7
 32
-R24
+R8
 !i10b 1
-R25
-R26
-R27
+R9
+R22
+R23
 !i113 1
 R12
 R13
 Emultiplier
-Z28 w1588321486
+Z27 w1588525483
 R1
 R2
 R3
 R4
-Z29 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
-Z30 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
+Z28 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
+Z29 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
 l0
 L9
 VRAIWnWV=gWSzT[^A9>Z=@1
 !s100 ELoc2n9_0nkzjEfHgW<_60
 R7
 32
-Z31 !s110 1588322726
+R8
 !i10b 1
-Z32 !s108 1588322726.000000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
-Z34 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
+R9
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
+Z31 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
 !i113 1
-Z35 !s102 -cover s
-Z36 o-work work -2002 -explicit -cover s
+Z32 !s102 -cover s
+Z33 o-work work -2002 -explicit -cover s
 R13
 Acombinatorial
 R1
@@ -181,143 +181,143 @@ VZg_><<LAB2cabP:0km64S2
 !s100 =;fc=eK111I<PBJO;QozX3
 R7
 32
-R31
+R8
 !i10b 1
+R9
+R30
+R31
+!i113 1
 R32
 R33
-R34
-!i113 1
-R35
-R36
 R13
 Emultiplier16
-R28
+R27
 R1
 R2
 R3
 R4
+R28
 R29
-R30
 l0
-L52
-VaGPS]7O00Z6k3hFJD[LNz1
-!s100 Un3TeQRoe9C<d]j;@0g9K1
+L53
+V=JQLS>]N7f`3^eEn=Xzg@2
+!s100 MDVf9ZNo;AZ33J6HOUM=_1
 R7
 32
-R31
+R8
 !i10b 1
+R9
+R30
+R31
+!i113 1
 R32
 R33
-R34
-!i113 1
-R35
-R36
 R13
 Acombinatorial
 R1
 R2
 R3
-DEx4 work 12 multiplier16 0 22 aGPS]7O00Z6k3hFJD[LNz1
-l71
-L59
-V>0NLPPl<10RfN59[AE[YY0
-!s100 @<T7RzFooVEVB[fkPS]cX0
+DEx4 work 12 multiplier16 0 22 =JQLS>]N7f`3^eEn=Xzg@2
+l72
+L60
+Vk9<hT8o@1R8il_Cizg61n2
+!s100 m7Y?KBR03;H@eP2@>MVd]0
 R7
 32
-R31
+R8
 !i10b 1
+R9
+R30
+R31
+!i113 1
 R32
 R33
-R34
-!i113 1
-R35
-R36
 R13
 Emultiplier16_pipeline
-R28
+R27
 R1
 R2
 R3
 R4
+R28
 R29
-R30
 l0
-L109
-V8akaoPK[^@Fl@i_dL>Sd;3
-!s100 BE^aA6MnIezU^O5K>Zf8d3
+L108
+V]>GX[Whlfb_co3CHnKi481
+!s100 nee<=c?zfl9MIjiKIljkd1
 R7
 32
-R31
+R8
 !i10b 1
+R9
+R30
+R31
+!i113 1
 R32
 R33
-R34
-!i113 1
-R35
-R36
 R13
 Apipeline
 R1
 R2
 R3
-DEx4 work 21 multiplier16_pipeline 0 22 8akaoPK[^@Fl@i_dL>Sd;3
-l130
-L118
-VUIZ1TI1XE[^hZ63S6^74z0
-!s100 A9Qo5i[P>AUVNeB0]6K9V3
+DEx4 work 21 multiplier16_pipeline 0 22 ]>GX[Whlfb_co3CHnKi481
+l129
+L117
+VTfzJVi^Tc911nN?b`DWo30
+!s100 ?zB@14UcC0A84>aX7@JZo2
 R7
 32
-R31
+R8
 !i10b 1
+R9
+R30
+R31
+!i113 1
 R32
 R33
-R34
-!i113 1
-R35
-R36
 R13
 Emultiplier_tb
-Z37 w1587720415
-R21
+Z34 w1588524622
+R19
 R1
 R2
 R3
 R4
-Z38 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
-Z39 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
+Z35 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
+Z36 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
 l0
 L7
 VU;;Fz;^R<kMT>OON?e@gC3
 !s100 Z_OJlIYz1NhbUQlXe^X]^1
 R7
 32
-Z40 !s110 1587908682
+R8
 !i10b 1
-Z41 !s108 1587908682.000000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
-Z43 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
+R9
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
+Z38 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
 !i113 1
-R35
-R36
+R32
+R33
 R13
 Abench
-R21
+R19
 R1
 R2
 R3
 DEx4 work 13 multiplier_tb 0 22 U;;Fz;^R<kMT>OON?e@gC3
 l21
 L10
-V79DlMI2jz@<S>>Tio=Xi83
-!s100 zngPU^5>e4P1Y97Ei9lEQ0
+VeIgTD_XDR8bM0:<VCXO:M1
+!s100 BL;WaH1l;^K8Saz:ZoR`A3
 R7
 32
-R40
+R8
 !i10b 1
-R41
-R42
-R43
+R9
+R37
+R38
 !i113 1
-R35
-R36
+R32
+R33
 R13
