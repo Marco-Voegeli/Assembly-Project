@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Sun May 03 18:45:44 2020
+Sun May 03 19:36:33 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 03 18:45:44 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 03 19:36:33 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
@@ -195,8 +195,8 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -775,7 +775,7 @@ Encoding Type:  One-Hot
 ; CLK3_DIVIDE_BY                ; 1                     ; Untyped                                    ;
 ; CLK2_DIVIDE_BY                ; 1                     ; Untyped                                    ;
 ; CLK1_DIVIDE_BY                ; 1                     ; Untyped                                    ;
-; CLK0_DIVIDE_BY                ; 5                     ; Signed Integer                             ;
+; CLK0_DIVIDE_BY                ; 10                    ; Signed Integer                             ;
 ; CLK9_PHASE_SHIFT              ; 0                     ; Untyped                                    ;
 ; CLK8_PHASE_SHIFT              ; 0                     ; Untyped                                    ;
 ; CLK7_PHASE_SHIFT              ; 0                     ; Untyped                                    ;
@@ -1357,7 +1357,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1367,17 +1367,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 03 18:45:22 2020
+    Info: Processing started: Sun May 03 19:36:12 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file gecko.bdf
     Info (12023): Found entity 1: GECKO
-Info (12021): Found 5 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp5 24.04/vhdl/arith_unit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp5 24.04/vhdl/arith_unit.vhd
     Info (12022): Found design unit 1: arith_unit-combinatorial File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 21
-    Info (12022): Found design unit 2: arith_unit-one_stage_pipeline File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 76
-    Info (12022): Found design unit 3: arith_unit-two_stage_pipeline_1 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 145
-    Info (12022): Found design unit 4: arith_unit-two_stage_pipeline_2 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 216
     Info (12023): Found entity 1: arith_unit File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 5
 Info (12021): Found 6 design units, including 3 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp5 24.04/vhdl/multiplier.vhd
     Info (12022): Found design unit 1: multiplier-combinatorial File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd Line: 16
@@ -1402,7 +1399,7 @@ Info (12128): Elaborating entity "altpll" for hierarchy "pipeline_lab:inst|PLL:P
 Info (12130): Elaborated megafunction instantiation "pipeline_lab:inst|PLL:PLLUnit|altpll:altpll_component" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/PLL.vhd Line: 133
 Info (12133): Instantiated megafunction "pipeline_lab:inst|PLL:PLLUnit|altpll:altpll_component" with the following parameter: File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/PLL.vhd Line: 133
     Info (12134): Parameter "bandwidth_type" = "AUTO"
-    Info (12134): Parameter "clk0_divide_by" = "5"
+    Info (12134): Parameter "clk0_divide_by" = "10"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_phase_shift" = "0"
@@ -1668,9 +1665,9 @@ Info (21057): Implemented 9854 device resources after synthesis - the final reso
     Info (21064): Implemented 340 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Sun May 03 18:45:44 2020
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Sun May 03 19:36:33 2020
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:33
 
 
