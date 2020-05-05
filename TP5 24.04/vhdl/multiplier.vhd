@@ -68,8 +68,8 @@ architecture combinatorial of multiplier16 is
     end component;
 
     signal s_lsb,s_msb,s_lsb8,s_msb8, s_upper:  unsigned(15 downto 0);
-    signal s_mid :unsigned(31 downto 0);
-begin
+
+    begin
     LSB8_LSB_MUL : multiplier
     PORT MAP(
         A => A(7 downto 0),
@@ -90,8 +90,7 @@ begin
         A => A(15 downto 8),
         B => B(7 downto 0),
         P => s_msb8);
-    s_mid <= ((15 downto 0 => '0') & s_msb8) + ((15 downto 0 => '0') & s_lsb8);
-    P <= s_lsb + (s_mid(23 downto 0) & (7 downto 0 => '0')) + (s_msb & (15 downto 0 => '0'));
+    P <= ((15 downto 0 => '0') & s_lsb)  + (((7 downto 0 => '0') & s_msb8) + ((7 downto 0 => '0') & s_lsb8) & (7 downto 0 => '0')) + (s_msb & (15 downto 0 => '0'));
 
 end combinatorial;
 
@@ -124,50 +123,51 @@ architecture pipeline of multiplier16_pipeline is
         );
     end component;
 
-    signal s_lsb,s_msb,s_lsb8,s_msb8, s_mid, s_upper, s_lsb_n, s_msb_n:  unsigned(31 downto 0);
+    signal s_lsb_lsb,s_msb_msb,s_lsb_msb,s_msb_lsb,s_lsb_lsb_n,s_msb_msb_n,s_lsb_msb_n,s_msb_lsb_n: unsigned(15 downto 0);
 
 begin
     LSB8_LSB_MUL : multiplier
     PORT MAP(
         A => A(7 downto 0),
         B => B(7 downto 0),
-        P => s_lsb(15 downto 0)
-);
+        P => s_lsb_lsb);
 
     MSB8_MSB_MUL : multiplier
     PORT MAP(
         A => A(15 downto 8),
         B => B(15 downto 8),
-        P => s_msb8(15 downto 0));
+        P => s_msb_msb);
 
     LSB8_MSB_MUL : multiplier
     PORT MAP(
         A => A(7 downto 0),
         B => B(15 downto 8),
-        P => s_lsb8(15 downto 0));
+        P => s_lsb_msb);
 
     MSB8_LSB_MUL : multiplier
     PORT MAP(
         A => A(15 downto 8),
         B => B(7 downto 0),
-        P => s_msb(15 downto 0));
+        P => s_msb_lsb);
     
 main : process(clk, reset_n)
     begin
         if(reset_n = '0') then
-        s_lsb_n <= (31 downto 0 => '0');
-        s_msb_n <= (31 downto 0 => '0');
+        s_lsb_lsb_n <= (15 downto 0 => '0');
+        s_msb_msb_n <= (15 downto 0 => '0');
+        s_lsb_msb_n <= (15 downto 0 => '0');
+        s_msb_lsb_n <= (15 downto 0 => '0');
         else
             if(rising_edge(clk)) then
-                s_lsb_n <= s_lsb + (s_mid(23 downto 0) & (7 downto 0 => '0'));
-                s_msb_n <= (s_msb(15 downto 0) & (15 downto 0 => '0'));
+                s_lsb_lsb_n <= s_lsb_lsb;
+                s_msb_lsb_n <= s_msb_lsb;
+                s_lsb_msb_n <= s_lsb_msb;
+                s_msb_msb_n <= s_msb_msb;
             end if;
         end if;
 
 end process main;
-    s_mid <= s_msb8 + s_lsb8;
-    --P <= s_lsb + (s_mid(23 downto 0) & (7 downto 0 => '0')) + (s_msb(15 downto 0) & (15 downto 0 => '0'));
-    P <= s_lsb_n + s_msb_n;
+P <= ((15 downto 0 => '0') & s_lsb_lsb_n)  + (((7 downto 0 => '0') & s_msb_lsb_n) + ((7 downto 0 => '0') & s_lsb_msb_n) & (7 downto 0 => '0')) + (s_msb_msb_n & (15 downto 0 => '0'));
 end pipeline;
 
 
