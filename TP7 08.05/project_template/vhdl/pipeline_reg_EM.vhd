@@ -19,7 +19,32 @@ entity pipeline_reg_EM is
 end pipeline_reg_EM;
 
 architecture synth of pipeline_reg_EM is
+    signal mux_1_out_s : std_logic_vector(31 downto 0);
+    signal sel_mem_out_s : std_logic;
+    signal rf_wren_out_s : std_logic;
+    signal mux_2_out_s   : std_logic_vector(4 downto 0);
 
 begin
-   
+
+main: process(reset_n, clk)
+begin
+if (reset_n = '0') then
+    mux_1_out_s <= (31 downto 0 => '0');
+    sel_mem_out_s <= '0';
+    rf_wren_out_s <= '0';
+    mux_2_out_s <= (4 downto 0 => '0');
+end if;
+if(rising_edge(clk)) then
+    mux_1_out_s <= mux_1_in;
+    sel_mem_out_s <= sel_mem_in;
+    rf_wren_out_s <= rf_wren_in;
+    mux_2_out_s <= mux_2_in;
+end if;
+end process main;
+
+mux_1_out<= mux_1_out_s;
+sel_mem_out <= sel_mem_out_s;
+rf_wren_out <= rf_wren_out_s;
+mux_2_out <= mux_2_out_s;
+
 end synth;
