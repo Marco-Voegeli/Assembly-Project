@@ -33,8 +33,7 @@ if (reset_n = '0') then
     sel_mem_out_s <= '0';
     rf_wren_out_s <= '0';
     mux_2_out_s <= (4 downto 0 => '0');
-end if;
-if(rising_edge(clk)) then
+elsif(rising_edge(clk)) then
     mux_1_out_s <= mux_1_in;
     sel_mem_out_s <= sel_mem_in;
     rf_wren_out_s <= rf_wren_in;

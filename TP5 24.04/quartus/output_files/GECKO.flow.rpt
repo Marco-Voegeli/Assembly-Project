@@ -1,5 +1,5 @@
 Flow report for GECKO
-Fri May 08 08:55:01 2020
+Sat May 09 14:16:43 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 08 08:54:54 2020       ;
+; Flow Status                        ; Successful - Sat May 09 14:16:36 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE30F23C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 9,156 / 28,848 ( 32 % )                     ;
-;     Total combinational functions  ; 5,481 / 28,848 ( 19 % )                     ;
-;     Dedicated logic registers      ; 8,367 / 28,848 ( 29 % )                     ;
-; Total registers                    ; 8367                                        ;
+; Total logic elements               ; 9,158 / 28,848 ( 32 % )                     ;
+;     Total combinational functions  ; 5,475 / 28,848 ( 19 % )                     ;
+;     Dedicated logic registers      ; 8,400 / 28,848 ( 29 % )                     ;
+; Total registers                    ; 8400                                        ;
 ; Total pins                         ; 100 / 329 ( 30 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 998 / 608,256 ( < 1 % )                     ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/08/2020 08:53:49 ;
+; Start date & time ; 05/09/2020 14:15:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GECKO               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1097005183814.158892082905764          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1097005183814.158902653001776          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
@@ -97,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4896 MB             ; 00:00:36                           ;
-; Fitter               ; 00:00:35     ; 1.2                     ; 5804 MB             ; 00:00:48                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4717 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.5                     ; 4906 MB             ; 00:00:07                           ;
-; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:33                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4885 MB             ; 00:00:31                           ;
+; Fitter               ; 00:00:40     ; 1.1                     ; 5873 MB             ; 00:00:51                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4716 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.5                     ; 4904 MB             ; 00:00:07                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

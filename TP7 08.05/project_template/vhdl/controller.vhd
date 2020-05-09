@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
+use ieee.numeric_std.all;
 entity controller is
     port(
         op         : in  std_logic_vector(5 downto 0);
@@ -23,7 +23,7 @@ entity controller is
 end controller;
 
 architecture synth of controller is
-type state_type is (F1, F2, DEC, R_OP,STORE,LOAD1,LOAD2,IOP,BRANCH,CALL,JMP,JMP_I,I_IOP,CALL_R, I_R_OP)
+type state_type is (F1, F2, DEC, R_OP,STORE,LOAD1,LOAD2,IOP,BRANCH,CALL,JMP,JMP_I,I_IOP,CALL_R, I_R_OP);
  signal state_curr : state_type;
 begin
 
@@ -122,13 +122,11 @@ begin
     end process OP_ALU_Process;
  
 
-    StateSwitch : process(state_reg,op,opx)
+    StateSwitch : process(state_curr,op,opx)
     begin
         --Setting all outputs to 0
         imm_signed <= '0';
         branch_op  <= '0';
-        ir_en      <= '0';
-        pc_add_imm <= '0';
         pc_sel_a   <= '0';
         pc_sel_imm <= '0';
         rf_wren    <= '0';
@@ -140,95 +138,94 @@ begin
         read       <= '0';
         write      <= '0';
 
-        case state_reg is
+        case state_curr is
             when F1 => 
                 read <= '1';
-                state_cur <= F2;
+                state_curr <= F2;
             when F2 =>
-                ir_en <= '1';
-                state_cur <= DEC;
+                state_curr <= DEC;
             when IOP =>
                 rf_wren    <= '1';
                 imm_signed <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when I_IOP =>
                 rf_wren    <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when R_OP =>
                 sel_b <= '1';
                 sel_rC <= '1'; 
                 rf_wren <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when I_R_OP =>
                 rf_wren <= '1';
                 sel_rC <= '1'; 
-                state_cur <= F1;
+                state_curr <= F1;
             when STORE =>
                 write <= '1';
                 imm_signed <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when BRANCH =>
-                pc_add_imm <= '1';
                 branch_op <= '1';
                 sel_b <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when JMP =>
                 pc_sel_a <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when JMP_I =>
                 pc_sel_imm <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when CALL =>  
                 rf_wren <= '1';
                 sel_pc  <= '1';
                 sel_ra  <= '1';
                 pc_sel_imm <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when CALL_R => 
                 rf_wren <= '1';
                 sel_pc  <= '1';
                 sel_ra  <= '1';
                 pc_sel_a <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
             when LOAD1 =>
                 read <= '1';
                 imm_signed <= '1';
-                state_cur <= LOAD2;
+                state_curr <= LOAD2;
             when LOAD2 =>
                 sel_mem <= '1';
                 rf_wren <= '1';
-                state_cur <= F1;
+                state_curr <= F1;
 
             when DEC =>
                 case to_integer(unsigned(op)) is
                     when 16#3A# => 
                         case to_integer(unsigned(opx)) is 
                         when 16#05# | 16#0D#  => 
-                            state_cur <= JMP; 
+                            state_curr <= JMP; 
                         when 16#02# | 16#3A# | 16#1A# | 16#12# =>
-                            state_cur <= I_R_OP;
+                            state_curr <= I_R_OP;
                         when 16#1D# =>
-                            state_cur <= CALL_R;    
+                            state_curr <= CALL_R;    
                         when others => 
-                            state_cur <= R_OP;
+                            state_curr <= R_OP;
                         end case;
                     when 16#04# =>
-                         state_cur <= IOP;
+                         state_curr <= IOP;
                     when 16#17# =>
-                        state_cur <= LOAD1;
+                        state_curr <= LOAD1;
                     when 16#15# =>
-                        state_cur <= STORE;
+                        state_curr <= STORE;
                     when 16#06# | 16#0E# | 16#16# | 16#1E# | 16#26# | 16#2E# | 16#36# =>
-                        state_cur <= BRANCH;
+                        state_curr <= BRANCH;
                     when 16#00# =>
-                            state_cur <= CALL;                    
+                            state_curr <= CALL;                    
                     when 16#01# =>
-                        state_cur <= JMP_I;
+                        state_curr <= JMP_I;
                     when 16#0C# | 16#14# | 16#1C# | 16#08# | 16#10# | 16#18# | 16#20# | 16#28# | 16#30# => 
-                        state_cur <= I_IOP;
+                        state_curr <= I_IOP;
                 when others => null; 
             end case;
             when others => null;
         end case;
     end process  StateSwitch;
+    rf_retaddr <= (4 downto 0 => '1');
 end synth;

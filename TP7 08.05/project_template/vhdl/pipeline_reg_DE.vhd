@@ -39,12 +39,12 @@ architecture synth of pipeline_reg_DE is
 signal s_sel_b, s_read, s_write, s_sel_pc, s_branch_op, s_sel_mem, s_rf_wren : std_logic;
 signal s_a, s_b, s_d_imm : std_logic_vector(31 downto 0);
 signal s_op_alu : std_logic_vector(5 downto 0);
-signal s_mux_out : std_logic_vector(4 downto 0);
+signal s_mux : std_logic_vector(4 downto 0);
 signal s_next_addr : std_logic_vector(15 downto 0);
 begin
 main: process(reset_n, clk)
 begin
-if(reset_n = 0) then
+if(reset_n = '0') then
     s_sel_b <= '0';
     s_read <= '0';
     s_write <= '0';
@@ -87,4 +87,5 @@ d_imm_out <= s_d_imm;
 op_alu_out <= s_op_alu;
 mux_out <= s_mux;
 next_addr_out <= s_next_addr;
+
 end synth;

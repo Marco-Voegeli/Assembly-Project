@@ -8,18 +8,18 @@ entity multiplier_tb is
 end;
 
 architecture bench of multiplier_tb is
-    signal A, B : unsigned(15 downto 0);
-    signal P    : unsigned(31 downto 0);
+    signal A, B : unsigned(7 downto 0);
+    signal P    : unsigned(15 downto 0);
 
-    component multiplier16 is
+    component multiplier is
         port(
-            A, B : in  unsigned(15 downto 0);
-            P    : out unsigned(31 downto 0)
+            A, B : in  unsigned(7 downto 0);
+            P    : out unsigned(15 downto 0)
         );
     end component;
 
 begin
-    multiplier_0 : multiplier16 port map(
+    multiplier_0 : multiplier port map(
             A => A,
             B => B,
             P => P
@@ -29,17 +29,17 @@ begin
         variable err         : boolean := false;
         variable line_output : line;
     begin
-        for i in 32768 to 65535 loop
-            for j in 0 to 65535 loop 
-                A <= to_unsigned(i, 16);
-                B <= to_unsigned(j, 16);
+        for i in 0 to 255 loop
+            for j in 0 to 255 loop
+                A <= to_unsigned(i, 8);
+                B <= to_unsigned(j, 8);
                 wait for 5 ns;
                 if (P /= (i * j) and not err) then
                     err := true;
                     report "not matching!" severity ERROR;
                 end if;
-           end loop;
-         end loop;
+            end loop;
+        end loop;
 
         line_output := new string'("===================================================================");
         writeline(output, line_output);

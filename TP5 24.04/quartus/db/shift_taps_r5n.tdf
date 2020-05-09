@@ -17,14 +17,14 @@
 --  refer to the applicable agreement for further details.
 
 
-FUNCTION altsyncram_t1b1 (aclr0, address_a[1..0], address_b[1..0], clock0, clocken0, data_a[12..0], wren_a)
+FUNCTION altsyncram_s1b1 (aclr0, address_a[1..0], address_b[1..0], clock0, clocken0, data_a[12..0], wren_a)
 RETURNS ( q_b[12..0]);
 FUNCTION cntr_7pf (clk_en, clock)
 RETURNS ( q[1..0]);
 FUNCTION cntr_u8h (aset, clk_en, clock, cnt_en)
 RETURNS ( cout);
 
---synthesis_resources = M9K 1 reg 1 
+--synthesis_resources = lut 5 M9K 1 reg 6 
 SUBDESIGN shift_taps_r5n
 ( 
 	aclr	:	input;
@@ -35,7 +35,7 @@ SUBDESIGN shift_taps_r5n
 	taps[12..0]	:	output;
 ) 
 VARIABLE 
-	altsyncram2 : altsyncram_t1b1;
+	altsyncram2 : altsyncram_s1b1;
 	dffe4 : dffe;
 	cntr1 : cntr_7pf;
 	cntr3 : cntr_u8h;

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat May 09 13:11:21 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : FPGA4U_DE0
+Top-level Entity Name : FPGA4U_DE0
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 9,161 / 22,320 ( 41 % )
+    Total combinational functions : 5,519 / 22,320 ( 25 % )
+    Dedicated logic registers : 8,321 / 22,320 ( 37 % )
+Total registers : 8321
+Total pins : 47 / 154 ( 31 % )
+Total virtual pins : 0
+Total memory bits : 4,779 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

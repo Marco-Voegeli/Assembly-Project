@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED_RESET",
+					"strict" : false
+				},
+				{
+					"name" : "LED_BUTTON[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_BUTTON[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_BUTTON[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_BUTTON[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[10]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_C_N[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_SEL_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BUTTON_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BUTTON_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BUTTON_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BUTTON_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N_0",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

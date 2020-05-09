@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat May 09 13:10:14 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : FPGA4U_DE0
+Top-level Entity Name : FPGA4U_DE0
+Family : Cyclone IV E
+Total logic elements : 9,456
+    Total combinational functions : 5,517
+    Dedicated logic registers : 8,321
+Total registers : 8321
+Total pins : 47
+Total virtual pins : 0
+Total memory bits : 4,779
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
