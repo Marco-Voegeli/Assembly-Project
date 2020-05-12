@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Fri May 08 12:48:42 2020
+Tue May 12 10:05:09 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,32 +17,33 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for decoder:decoder_0
- 17. Source assignments for CPU:inst|ALU:alu_0
- 18. Source assignments for CPU:inst|mux2x32:mux_mem
- 19. Source assignments for CPU:inst|register_file:register_file_0
- 20. Source assignments for CPU:inst|mux2x32:mux_b
- 21. Source assignments for CPU:inst|mux2x32:mux_data
- 22. Source assignments for CPU:inst|extend:inst1
- 23. Source assignments for CPU:inst|mux2x5:mux_aw
- 24. Source assignments for CPU:inst|mux2x5:mux_ra
- 25. Source assignments for CPU:inst|IR:inst
- 26. Source assignments for CPU:inst|IR:IR_0
- 27. Source assignments for CPU:inst|mux2x16:mux_addr
- 28. Source assignments for DATa_rOM:inst3|data_ROM_Block:iD_S_5C1c22e5_6Fcf72ff_e|altsyncram:altsyncram_component|altsyncram_k7b1:auto_generated
- 29. Source assignments for iNStrUctiOn_RoM:inst4|instruction_ROM_Block:iD_S_36FDD56D_59c20fa9_E|altsyncram:altsyncram_component|altsyncram_s0c1:auto_generated
- 30. Source assignments for RAM:RAM_0|altsyncram:Id_S_B889004_7e48Ff67_e_rtl_0|altsyncram_vh41:auto_generated
- 31. Parameter Settings for User Entity Instance: DATa_rOM:inst3|data_ROM_Block:iD_S_5C1c22e5_6Fcf72ff_e|altsyncram:altsyncram_component
- 32. Parameter Settings for User Entity Instance: iNStrUctiOn_RoM:inst4|instruction_ROM_Block:iD_S_36FDD56D_59c20fa9_E|altsyncram:altsyncram_component
- 33. Parameter Settings for Inferred Entity Instance: RAM:RAM_0|altsyncram:Id_S_B889004_7e48Ff67_e_rtl_0
- 34. altsyncram Parameter Settings by Entity Instance
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for decoder:decoder_0
+ 18. Source assignments for CPU:inst|ALU:alu_0
+ 19. Source assignments for CPU:inst|mux2x32:mux_mem
+ 20. Source assignments for CPU:inst|register_file:register_file_0
+ 21. Source assignments for CPU:inst|mux2x32:mux_b
+ 22. Source assignments for CPU:inst|mux2x32:mux_data
+ 23. Source assignments for CPU:inst|extend:inst1
+ 24. Source assignments for CPU:inst|mux2x5:mux_aw
+ 25. Source assignments for CPU:inst|mux2x5:mux_ra
+ 26. Source assignments for CPU:inst|IR:inst
+ 27. Source assignments for CPU:inst|IR:IR_0
+ 28. Source assignments for CPU:inst|mux2x16:mux_addr
+ 29. Source assignments for DATa_rOM:inst3|data_ROM_Block:iD_S_5C1c22e5_6Fcf72ff_e|altsyncram:altsyncram_component|altsyncram_k7b1:auto_generated
+ 30. Source assignments for iNStrUctiOn_RoM:inst4|instruction_ROM_Block:iD_S_36FDD56D_59c20fa9_E|altsyncram:altsyncram_component|altsyncram_s0c1:auto_generated
+ 31. Source assignments for RAM:RAM_0|altsyncram:Id_S_B889004_7e48Ff67_e_rtl_0|altsyncram_vh41:auto_generated
+ 32. Parameter Settings for User Entity Instance: DATa_rOM:inst3|data_ROM_Block:iD_S_5C1c22e5_6Fcf72ff_e|altsyncram:altsyncram_component
+ 33. Parameter Settings for User Entity Instance: iNStrUctiOn_RoM:inst4|instruction_ROM_Block:iD_S_36FDD56D_59c20fa9_E|altsyncram:altsyncram_component
+ 34. Parameter Settings for Inferred Entity Instance: RAM:RAM_0|altsyncram:Id_S_B889004_7e48Ff67_e_rtl_0
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -68,15 +69,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 08 12:48:42 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 12 10:05:09 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,745                                       ;
-;     Total combinational functions  ; 2,544                                       ;
-;     Dedicated logic registers      ; 1,389                                       ;
-; Total registers                    ; 1389                                        ;
+; Total logic elements               ; 3,617                                       ;
+;     Total combinational functions  ; 2,417                                       ;
+;     Dedicated logic registers      ; 1,382                                       ;
+; Total registers                    ; 1382                                        ;
 ; Total pins                         ; 102                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 98,304                                      ;
@@ -184,11 +185,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -242,20 +239,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,745     ;
+; Estimated Total logic elements              ; 3,617     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2544      ;
+; Total combinational functions               ; 2417      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1765      ;
-;     -- 3 input functions                    ; 563       ;
-;     -- <=2 input functions                  ; 216       ;
+;     -- 4 input functions                    ; 1706      ;
+;     -- 3 input functions                    ; 534       ;
+;     -- <=2 input functions                  ; 177       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2456      ;
-;     -- arithmetic mode                      ; 88        ;
+;     -- normal mode                          ; 2370      ;
+;     -- arithmetic mode                      ; 47        ;
 ;                                             ;           ;
-; Total registers                             ; 1389      ;
-;     -- Dedicated logic registers            ; 1389      ;
+; Total registers                             ; 1382      ;
+;     -- Dedicated logic registers            ; 1382      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 102       ;
@@ -264,9 +261,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1485      ;
-; Total fan-out                               ; 14758     ;
-; Average fan-out                             ; 3.49      ;
+; Maximum fan-out                             ; 1478      ;
+; Total fan-out                               ; 14335     ;
+; Average fan-out                             ; 3.50      ;
 +---------------------------------------------+-----------+
 
 
@@ -275,25 +272,25 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name           ; Library Name ;
 +--------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |GECKO                                                 ; 2544 (116)          ; 1389 (0)                  ; 98304       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                                                     ; GECKO                 ; work         ;
-;    |CPU:inst|                                          ; 2283 (0)            ; 1263 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                                                            ; CPU                   ; work         ;
+; |GECKO                                                 ; 2417 (116)          ; 1382 (0)                  ; 98304       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                                                     ; GECKO                 ; work         ;
+;    |CPU:inst|                                          ; 2156 (0)            ; 1256 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                                                            ; CPU                   ; work         ;
 ;       |ALU:alu_0|                                      ; 638 (26)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                                                                  ; ALU                   ; work         ;
 ;          |add_sub:add_sub_0|                           ; 76 (76)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                                                                ; add_sub               ; work         ;
 ;          |comparator:comparator_0|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|comparator:comparator_0                                                                                          ; comparator            ; work         ;
 ;          |logic_unit:logic_unit_0|                     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|logic_unit:logic_unit_0                                                                                          ; logic_unit            ; work         ;
 ;          |multiplexer:multiplexer_0|                   ; 216 (216)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                                                        ; multiplexer           ; work         ;
 ;          |shift_unit:shift_unit_0|                     ; 313 (313)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                                                          ; shift_unit            ; work         ;
-;       |PC:inst6|                                       ; 125 (125)           ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:inst6                                                                                                                   ; PC                    ; work         ;
-;       |controller:inst7|                               ; 78 (78)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:inst7                                                                                                           ; controller            ; work         ;
+;       |PC:inst6|                                       ; 14 (14)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:inst6                                                                                                                   ; PC                    ; work         ;
+;       |controller:inst7|                               ; 62 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:inst7                                                                                                           ; controller            ; work         ;
 ;       |extend:inst1|                                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|extend:inst1                                                                                                               ; extend                ; work         ;
 ;       |mux2x32:mux_b|                                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                                                              ; mux2x32               ; work         ;
 ;       |mux2x32:mux_data|                               ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_data                                                                                                           ; mux2x32               ; work         ;
 ;       |mux2x32:mux_mem|                                ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_mem                                                                                                            ; mux2x32               ; work         ;
 ;       |mux2x5:mux_aw|                                  ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x5:mux_aw                                                                                                              ; mux2x5                ; work         ;
 ;       |mux2x5:mux_ra|                                  ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x5:mux_ra                                                                                                              ; mux2x5                ; work         ;
-;       |pipeline_reg_DE:inst5|                          ; 0 (0)               ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|pipeline_reg_DE:inst5                                                                                                      ; pipeline_reg_DE       ; work         ;
+;       |pipeline_reg_DE:inst5|                          ; 0 (0)               ; 127 (127)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|pipeline_reg_DE:inst5                                                                                                      ; pipeline_reg_DE       ; work         ;
 ;       |pipeline_reg_EM:inst4|                          ; 0 (0)               ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|pipeline_reg_EM:inst4                                                                                                      ; pipeline_reg_EM       ; work         ;
-;       |pipeline_reg_FD:inst3|                          ; 0 (0)               ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|pipeline_reg_FD:inst3                                                                                                      ; pipeline_reg_FD       ; work         ;
+;       |pipeline_reg_FD:inst3|                          ; 0 (0)               ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|pipeline_reg_FD:inst3                                                                                                      ; pipeline_reg_FD       ; work         ;
 ;       |pipeline_reg_MW:inst2|                          ; 0 (0)               ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|pipeline_reg_MW:inst2                                                                                                      ; pipeline_reg_MW       ; work         ;
 ;       |register_file:register_file_0|                  ; 1335 (1335)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0                                                                                              ; register_file         ; work         ;
 ;    |DATa_rOM:inst3|                                    ; 1 (1)               ; 1 (1)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|DATa_rOM:inst3                                                                                                                      ; DATa_rOM              ; work         ;
@@ -335,62 +332,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                ;
-+-----------------------------------------------------+-------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                 ; Free of Timing Hazards ;
-+-----------------------------------------------------+-------------------------------------+------------------------+
-; CPU:inst|controller:inst7|state_curr.I_R_OP_178     ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.R_OP_259       ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.CALL_213       ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.CALL_R_185     ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.IOP_227        ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.LOAD1_245      ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|write                     ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.DEC_270        ; CPU:inst|controller:inst7|Selector3 ; yes                    ;
-; CPU:inst|controller:inst7|branch_op                 ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[0]                 ; CPU:inst|controller:inst7|Mux30     ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[1]                 ; CPU:inst|controller:inst7|Mux30     ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[2]                 ; CPU:inst|controller:inst7|Mux30     ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[3]                 ; CPU:inst|controller:inst7|Mux30     ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[4]                 ; CPU:inst|controller:inst7|Mux30     ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[5]                 ; CPU:inst|controller:inst7|Mux30     ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[2]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[3]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[4]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[5]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[6]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[7]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[8]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[9]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[10]                       ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[11]                       ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.F2_281         ; CPU:inst|controller:inst7|Selector3 ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.F1_292         ; CPU:inst|controller:inst7|Selector3 ; yes                    ;
-; CPU:inst|controller:inst7|sel_mem                   ; CPU:inst|controller:inst7|Selector3 ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.JMP_206        ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.JMP_I_199      ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|controller:inst7|state_curr.I_IOP_192      ; CPU:inst|controller:inst7|Mux5      ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[0]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[12]                       ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[13]                       ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[14]                       ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[15]                       ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; CPU:inst|PC:inst6|big_mux[1]                        ; CPU:inst|PC:inst6|Mux16             ; yes                    ;
-; Number of user-specified and inferred latches = 37  ;                                     ;                        ;
-+-----------------------------------------------------+-------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; CPU:inst|controller:inst7|sel_ra                    ; CPU:inst|controller:inst7|Mux17    ; yes                    ;
+; CPU:inst|controller:inst7|imm_signed                ; CPU:inst|controller:inst7|Mux9     ; yes                    ;
+; CPU:inst|controller:inst7|sel_pc                    ; CPU:inst|controller:inst7|Mux17    ; yes                    ;
+; CPU:inst|controller:inst7|sel_b                     ; CPU:inst|controller:inst7|Mux13    ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[0]                 ; CPU:inst|controller:inst7|Mux43    ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[1]                 ; CPU:inst|controller:inst7|Mux43    ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[2]                 ; CPU:inst|controller:inst7|Mux43    ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[3]                 ; CPU:inst|controller:inst7|Mux43    ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[4]                 ; CPU:inst|controller:inst7|Mux43    ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[5]                 ; CPU:inst|controller:inst7|Mux43    ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[2]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[3]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[4]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[5]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[6]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[7]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[8]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[9]                        ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[10]                       ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[11]                       ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|controller:inst7|pc_sel_a                  ; CPU:inst|controller:inst7|Mux29    ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[12]                       ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[13]                       ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[14]                       ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|PC:inst6|big_mux[15]                       ; CPU:inst|controller:inst7|pc_sel_a ; yes                    ;
+; CPU:inst|controller:inst7|rf_wren                   ; CPU:inst|controller:inst7|Mux25    ; yes                    ;
+; Number of user-specified and inferred latches = 26  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+-----------------------------------------------+----------------------------------------+
-; Register name                                 ; Reason for Removal                     ;
-+-----------------------------------------------+----------------------------------------+
-; iNStrUctiOn_RoM:inst4|iD_s_6F8bcbe_62e8365d_e ; Stuck at VCC due to stuck port data_in ;
-; buttons:buttons_0|read_reg                    ; Lost fanout                            ;
-; Total Number of Removed Registers = 2         ;                                        ;
-+-----------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++---------------------------------------------------+----------------------------------------+
+; Register name                                     ; Reason for Removal                     ;
++---------------------------------------------------+----------------------------------------+
+; iNStrUctiOn_RoM:inst4|iD_s_6F8bcbe_62e8365d_e     ; Stuck at VCC due to stuck port data_in ;
+; CPU:inst|PC:inst6|s_next_addr[0]                  ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|pipeline_reg_FD:inst3|next_addr_out_s[0] ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|pipeline_reg_DE:inst5|s_next_addr[0]     ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|PC:inst6|s_next_addr[1]                  ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|pipeline_reg_FD:inst3|next_addr_out_s[1] ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|pipeline_reg_DE:inst5|s_next_addr[1]     ; Stuck at GND due to stuck port data_in ;
+; buttons:buttons_0|read_reg                        ; Lost fanout                            ;
+; CPU:inst|pipeline_reg_DE:inst5|s_branch_op        ; Lost fanout                            ;
+; Total Number of Removed Registers = 9             ;                                        ;
++---------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                       ;
++----------------------------------+---------------------------+----------------------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register             ;
++----------------------------------+---------------------------+----------------------------------------------------+
+; CPU:inst|PC:inst6|s_next_addr[0] ; Stuck at GND              ; CPU:inst|pipeline_reg_FD:inst3|next_addr_out_s[0], ;
+;                                  ; due to stuck port data_in ; CPU:inst|pipeline_reg_DE:inst5|s_next_addr[0]      ;
+; CPU:inst|PC:inst6|s_next_addr[1] ; Stuck at GND              ; CPU:inst|pipeline_reg_FD:inst3|next_addr_out_s[1], ;
+;                                  ; due to stuck port data_in ; CPU:inst|pipeline_reg_DE:inst5|s_next_addr[1]      ;
++----------------------------------+---------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -398,10 +403,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1389  ;
+; Total registers                              ; 1382  ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 395   ;
+; Number of registers using Asynchronous Clear ; 388   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1096  ;
 ; Number of registers using Preset             ; 0     ;
@@ -439,11 +444,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux1          ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux7          ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[27]                      ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[4]                       ;
-; 22:1               ; 4 bits    ; 56 LEs        ; 4 LEs                ; 52 LEs                 ; No         ; |GECKO|CPU:inst|controller:inst7|Mux13 ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |GECKO|CPU:inst|PC:inst6|Mux9          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Add1          ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Add1          ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Add1          ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[25]                      ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[6]                       ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 56 LEs               ; 112 LEs                ; No         ; |GECKO|CPU:inst|controller:inst7|Mux17 ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[0]                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
@@ -2303,25 +2310,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         egister_file:register_file_0 ; 1            ;
 ;     decoder:decoder_0                ; 1            ;
 ; boundary_port                        ; 102          ;
-; cycloneiii_ff                        ; 397          ;
-;     CLR                              ; 283          ;
+; cycloneiii_ff                        ; 390          ;
+;     CLR                              ; 276          ;
 ;     CLR SCLR                         ; 8            ;
 ;     ENA CLR                          ; 104          ;
 ;     plain                            ; 2            ;
-; cycloneiii_lcell_comb                ; 453          ;
-;     arith                            ; 55           ;
-;         2 data inputs                ; 33           ;
-;         3 data inputs                ; 22           ;
-;     normal                           ; 398          ;
+; cycloneiii_lcell_comb                ; 326          ;
+;     arith                            ; 14           ;
+;         2 data inputs                ; 7            ;
+;         3 data inputs                ; 7            ;
+;     normal                           ; 312          ;
 ;         0 data inputs                ; 2            ;
-;         1 data inputs                ; 11           ;
-;         2 data inputs                ; 116          ;
-;         3 data inputs                ; 86           ;
-;         4 data inputs                ; 183          ;
+;         1 data inputs                ; 9            ;
+;         2 data inputs                ; 105          ;
+;         3 data inputs                ; 72           ;
+;         4 data inputs                ; 124          ;
 ; cycloneiii_ram_block                 ; 96           ;
 ;                                      ;              ;
-; Max LUT depth                        ; 7.30         ;
-; Average LUT depth                    ; 2.46         ;
+; Max LUT depth                        ; 5.00         ;
+; Average LUT depth                    ; 1.50         ;
 +--------------------------------------+--------------+
 
 
@@ -2340,7 +2347,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 08 12:48:29 2020
+    Info: Processing started: Tue May 12 10:04:54 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2397,8 +2404,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: buttons-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/buttons.vhd Line: 22
     Info (12023): Found entity 1: buttons File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/buttons.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp7 08.05/project_template/vhdl/controller.vhd
-    Info (12022): Found design unit 1: controller-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 25
-    Info (12023): Found entity 1: controller File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 4
+    Info (12022): Found design unit 1: controller-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 39
+    Info (12023): Found entity 1: controller File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp7 08.05/project_template/vhdl/leds.vhd
     Info (12022): Found design unit 1: LEDs-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd Line: 22
     Info (12023): Found entity 1: LEDs File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd Line: 5
@@ -2416,29 +2423,35 @@ Warning (275013): Port "clk" of type IR and instance "inst" is missing source si
 Warning (275013): Port "clk" of type IR and instance "IR_0" is missing source signal
 Info (12128): Elaborating entity "pipeline_reg_DE" for hierarchy "CPU:inst|pipeline_reg_DE:inst5"
 Info (12128): Elaborating entity "controller" for hierarchy "CPU:inst|controller:inst7"
-Warning (10631): VHDL Process Statement warning at controller.vhd(30): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at controller.vhd(125): inferring latch(es) for signal or variable "state_curr", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.I_R_OP" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.CALL_R" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.I_IOP" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.JMP_I" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.JMP" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.CALL" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.BRANCH" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.IOP" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.LOAD2" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.LOAD1" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.STORE" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.R_OP" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.DEC" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.F2" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "state_curr.F1" at controller.vhd(125) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(30) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(30) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(30) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(30) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-Info (10041): Inferred latch for "op_alu[4]" at controller.vhd(30) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-Info (10041): Inferred latch for "op_alu[5]" at controller.vhd(30) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at controller.vhd(42): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "pc_sel_a", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "rf_wren", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "sel_rC", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "sel_pc", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "sel_ra", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "sel_b", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "imm_signed", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "sel_mem", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "write", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "branch_op", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Warning (10631): VHDL Process Statement warning at controller.vhd(135): inferring latch(es) for signal or variable "pc_sel_imm", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "pc_sel_imm" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "branch_op" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "write" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "sel_mem" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "imm_signed" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "sel_b" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "sel_ra" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "sel_pc" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "sel_rC" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "rf_wren" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "pc_sel_a" at controller.vhd(135) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 135
+Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Info (10041): Inferred latch for "op_alu[4]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Info (10041): Inferred latch for "op_alu[5]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
 Info (12128): Elaborating entity "pipeline_reg_FD" for hierarchy "CPU:inst|pipeline_reg_FD:inst3"
 Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst|PC:inst6"
 Warning (10492): VHDL Process Statement warning at PC.vhd(40): signal "sel_conc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 40
@@ -2607,76 +2620,34 @@ Info (12133): Instantiated megafunction "RAM:RAM_0|altsyncram:Id_S_B889004_7e48F
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vh41.tdf
     Info (12023): Found entity 1: altsyncram_vh41 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/db/altsyncram_vh41.tdf Line: 27
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.I_R_OP_178 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "CPU:inst|controller:inst7|sel_pc" merged with LATCH primitive "CPU:inst|controller:inst7|sel_ra" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 28
+Warning (13012): Latch CPU:inst|controller:inst7|sel_ra has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 29
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.R_OP_259 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
+Warning (13012): Latch CPU:inst|controller:inst7|imm_signed has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 15
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.CALL_213 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[5] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.CALL_R_185 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.IOP_227 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[4] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.LOAD1_245 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|write has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 12
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|branch_op has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 14
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[0] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[3] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[1] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[4] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[2] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[5] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[3] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[4] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[5] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[2] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[3] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[4] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[5] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[6] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[7] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[8] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[9] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[10] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[11] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.JMP_206 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.JMP_I_199 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[2] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|state_curr.I_IOP_192 has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 125
+Warning (13012): Latch CPU:inst|controller:inst7|sel_b has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 26
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[1] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[0] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[12] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[13] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[14] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[15] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
-Warning (13012): Latch CPU:inst|PC:inst6|big_mux[1] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:inst7|pc_sel_imm File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 17
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[0] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[3] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[1] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[4] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[2] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[5] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[3] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[4] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[5] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|pc_sel_a has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[13] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
+Warning (13012): Latch CPU:inst|controller:inst7|rf_wren has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
 Info (13000): Registers with preset signals will power-up high File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd Line: 79
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (35003): Optimize away 187 nodes that do not fanout to OUTPUT or BIDIR pins
@@ -2863,15 +2834,15 @@ Info (35003): Optimize away 187 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "CPU:inst|IR:IR_0|enable" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
     Info (35004): Node: "CPU:inst|IR:IR_0|clk" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
     Info (35004): Node: "CPU:inst|IR:IR_0|D[0]" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
-Info (21057): Implemented 3989 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3841 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 3791 logic cells
+    Info (21061): Implemented 3643 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 142 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Fri May 08 12:48:42 2020
-    Info: Elapsed time: 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Tue May 12 10:05:09 2020
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:23
 
 
