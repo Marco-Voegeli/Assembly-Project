@@ -4,7 +4,7 @@ z0
 13
 cModel Technology
 Earith_unit
-Z0 w1589022758
+Z0 w1589130127
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -17,23 +17,23 @@ V]j:Z2lgLC8T`YNahi7nUT1
 !s100 L]MBi@k0OKXoVf_^WS=h]1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1589022780
+Z8 !s110 1589267332
 !i10b 1
-Z9 !s108 1589022779.000000
+Z9 !s108 1589267331.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd|
 Z11 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
-Aone_stage_pipeline
+Atwo_stage_pipeline_2
 R1
 R2
 R3
 Z14 DEx4 work 10 arith_unit 0 22 ]j:Z2lgLC8T`YNahi7nUT1
-l43
-L23
-Z15 V0CL]DfY>J`kmZ5KQM=k8I0
-Z16 !s100 A3b1N0i3B2UdeUTFXeONQ2
+l205
+L185
+V0zI6aonk^dD>BEMmOEe7I0
+!s100 o`EnF@34P3FgXY>j?URF62
 R7
 32
 R8
@@ -44,88 +44,86 @@ R11
 !i113 1
 R12
 R13
-Atwo_stage_pipeline_2
-R1
-R2
-R3
-R14
-l238
-L216
-V1?Ra;1@>j@c9SJTYdj:X81
-!s100 a?Fn`]mYN[@[H9?E:WM_?2
-R7
-32
-Z17 !s110 1589019330
-!i10b 1
-Z18 !s108 1589019330.000000
-R10
-R11
-!i113 1
-R12
-R13
-Z19 w1589018817
 Atwo_stage_pipeline_1
 R1
 R2
 R3
 R14
-l163
-L144
-Vca?l:cFi1JAATKh3T08XR3
-!s100 ^hdlza2C@SSe>;9<M]aJI2
+l116
+L97
+VfghXJgGQ75z<@iOTP80B]0
+!s100 3iRLn`_R@MZ0fO0T9fm;N2
 R7
 32
-R17
+R8
 !i10b 1
-R18
+R9
 R10
 R11
 !i113 1
 R12
 R13
-R19
+Aone_stage_pipeline
+R1
+R2
+R3
+R14
+l43
+L23
+Z15 VnBHDDY59=1ch^2V<R6?;92
+Z16 !s100 M[Y5m1^GzkLVH;eA:S[LF0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
 Acombinatorial
 R1
 R2
 R3
 R14
-l41
-L22
-VV3Q>8j0fcH:L=GAM^C`0k1
-!s100 HkIlH<?zA]M9zG3]AXo422
+l40
+L21
+Vlm[1nZTGmHZEcDac4eTCL1
+!s100 ReA^72>eb`4HZ1<DX4BH:0
 R7
 32
-R17
+!s110 1589059982
 !i10b 1
-R18
+!s108 1589059982.000000
 R10
 R11
 !i113 1
 R12
 R13
-R19
+w1589059554
 Emultiplier
-Z20 w1589016000
+Z17 w1589066523
 R1
 R2
 R3
 R4
-Z21 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
-Z22 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
+Z18 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
+Z19 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd
 l0
 L9
 VRAIWnWV=gWSzT[^A9>Z=@1
 !s100 ELoc2n9_0nkzjEfHgW<_60
 R7
 32
-Z23 !s110 1589022779
+Z20 !s110 1589066839
 !i10b 1
-R9
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
-Z25 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
+Z21 !s108 1589066839.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
+Z23 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd|
 !i113 1
-Z26 !s102 -cover s
-Z27 o-work work -2002 -explicit -cover s
+Z24 !s102 -cover s
+Z25 o-work work -2002 -explicit -cover s
 R13
 Acombinatorial
 R1
@@ -134,41 +132,41 @@ R3
 DEx4 work 10 multiplier 0 22 RAIWnWV=gWSzT[^A9>Z=@1
 l21
 L16
-VZg_><<LAB2cabP:0km64S2
-!s100 =;fc=eK111I<PBJO;QozX3
+VZbm[ka2?[DEk3TR:dAWFK0
+!s100 JIjJ=TX@=WP_T7QXQj_7d0
 R7
 32
-R23
+R20
 !i10b 1
-R9
+R21
+R22
+R23
+!i113 1
 R24
 R25
-!i113 1
-R26
-R27
 R13
 Emultiplier16
-R20
+R17
 R1
 R2
 R3
 R4
-R21
-R22
+R18
+R19
 l0
 L53
 V=JQLS>]N7f`3^eEn=Xzg@2
 !s100 MDVf9ZNo;AZ33J6HOUM=_1
 R7
 32
-R23
+R20
 !i10b 1
-R9
+R21
+R22
+R23
+!i113 1
 R24
 R25
-!i113 1
-R26
-R27
 R13
 Acombinatorial
 R1
@@ -181,37 +179,37 @@ V`MacP<GN<XbZF<NGo3C7?3
 !s100 z3aTC?PWc1Edb0RDA]cZ83
 R7
 32
-R23
+R20
 !i10b 1
-R9
+R21
+R22
+R23
+!i113 1
 R24
 R25
-!i113 1
-R26
-R27
 R13
 Emultiplier16_pipeline
-R20
+R17
 R1
 R2
 R3
 R4
-R21
-R22
+R18
+R19
 l0
 L107
 VN0ZfnC<?[N?5z2^WbKbWX0
 !s100 8AJib@i0]ha9`7cgUQRUf0
 R7
 32
-R23
+R20
 !i10b 1
-R9
+R21
+R22
+R23
+!i113 1
 R24
 R25
-!i113 1
-R26
-R27
 R13
 Apipeline
 R1
@@ -224,41 +222,41 @@ VX3XPJ25zFKC7V^:O]din?0
 !s100 T?<1M_[l@9hk38_6?6SOL1
 R7
 32
-R23
+R20
 !i10b 1
-R9
+R21
+R22
+R23
+!i113 1
 R24
 R25
-!i113 1
-R26
-R27
 R13
 Emultiplier_tb
-Z28 w1589019122
-Z29 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z26 w1589019122
+Z27 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
 R4
-Z30 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
-Z31 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
+Z28 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
+Z29 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd
 l0
 L7
 VU;;Fz;^R<kMT>OON?e@gC3
 !s100 Z_OJlIYz1NhbUQlXe^X]^1
 R7
 32
-R23
+Z30 !s110 1589022779
 !i10b 1
-R9
+Z31 !s108 1589022779.000000
 Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
 Z33 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/testbench/multiplier_tb.vhd|
 !i113 1
-R26
-R27
+R24
+R25
 R13
 Abench
-R29
+R27
 R1
 R2
 R3
@@ -269,12 +267,54 @@ V79DlMI2jz@<S>>Tio=Xi83
 !s100 zngPU^5>e4P1Y97Ei9lEQ0
 R7
 32
-R23
+R30
 !i10b 1
-R9
+R31
 R32
 R33
 !i113 1
-R26
-R27
+R24
+R25
+R13
+Epipeline_lab
+Z34 w1589128885
+R1
+R2
+R3
+R4
+Z35 8C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd
+Z36 FC:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd
+l0
+L10
+Vz8:2^:c6I42oVXWV3<U=02
+!s100 U_Z[2SEjCZa:@:Dh2F>M41
+R7
+32
+Z37 !s110 1589129079
+!i10b 1
+Z38 !s108 1589129079.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd|
+Z40 !s107 C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd|
+!i113 1
+R12
+R13
+Asynth
+R14
+R1
+R2
+R3
+DEx4 work 12 pipeline_lab 0 22 z8:2^:c6I42oVXWV3<U=02
+l60
+L20
+VeO=^NR<NCUJlAOD]1mf3J2
+!s100 e;LCcEBFFX2LK;DMhgVXz2
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
 R13

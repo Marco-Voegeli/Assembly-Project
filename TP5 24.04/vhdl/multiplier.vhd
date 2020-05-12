@@ -37,7 +37,7 @@ begin
     s_B_0 <= s_A_0 + (s_A_1(13 downto 0) & "00");
     s_B_1 <= s_A_2 + (s_A_3(13 downto 0) & "00");
     
-    P <= s_B_0 + (s_B_1(11 downto 0) & "0000");
+    P <= (s_B_0 + (s_B_1(11 downto 0) & "0000"));
 
 end combinatorial;
 

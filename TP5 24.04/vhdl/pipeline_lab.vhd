@@ -44,7 +44,7 @@ architecture synth of pipeline_lab is
     signal FIFO_in_op : std_logic_vector(SIZE - 1 downto 0);
     signal FIFO_out   : std_logic_vector((32 * SIZE) - 1 downto 0);
     signal FIFO_comp  : std_logic_vector((32 * SIZE) - 1 downto 0);
-
+    signal s_val, s_act : std_logic_vector(31 downto 0);
     -- accumulator for the comparison
     signal accum_comp : std_logic;
 
@@ -62,8 +62,8 @@ begin
     -- The arithmetic unit --
     -------------------------
     --ArithmeticUnit : entity work.arith_unit(combinatorial) port map(
-    ArithmeticUnit : entity work.arith_unit(one_stage_pipeline) port map(
-     --ArithmeticUnit : entity work.arith_unit(two_stage_pipeline_1) port map(
+    --ArithmeticUnit : entity work.arith_unit(one_stage_pipeline) port map(
+    ArithmeticUnit : entity work.arith_unit(two_stage_pipeline_1) port map(
     --ArithmeticUnit : entity work.arith_unit(two_stage_pipeline_2) port map(
             clk     => pipeline_clk,
             reset_n => reset_n,
@@ -175,6 +175,8 @@ begin
     process(clk, reset_n)
         variable sync_fifo : std_logic_vector(32 * SIZE - 1 downto 0);
     begin
+    s_val <= sync_fifo(31 downto 0); 
+    s_act <= FIFO_comp(31 downto 0);
         if (reset_n = '0') then
             accum_comp <= '1';
             sync_fifo  := (others => '0');
@@ -183,6 +185,7 @@ begin
                 sync_fifo := FIFO_out;
             else
                 if (sync_fifo(15 downto 0) /= FIFO_comp(15 downto 0)) then
+                    
                     accum_comp <= '0';
                 end if;
                 sync_fifo := (31 downto 0 => '0') & sync_fifo(32 * SIZE - 1 downto 32);

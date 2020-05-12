@@ -9,6 +9,3 @@ loop:
 	beq t0, t1, end
 	jmpi loop
 end: break 
-
-t0 : F D E M W
-stw    F F F F D E M W

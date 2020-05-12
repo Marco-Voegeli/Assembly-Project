@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Sat May 09 14:15:51 2020
+Sun May 10 18:50:57 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -78,15 +78,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 09 14:15:51 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 10 18:50:57 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 9,438                                       ;
+; Total logic elements               ; 9,443                                       ;
 ;     Total combinational functions  ; 5,430                                       ;
-;     Dedicated logic registers      ; 8,400                                       ;
-; Total registers                    ; 8400                                        ;
+;     Dedicated logic registers      ; 8,434                                       ;
+; Total registers                    ; 8434                                        ;
 ; Total pins                         ; 100                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 998                                         ;
@@ -269,20 +269,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 9,438         ;
+; Estimated Total logic elements              ; 9,443         ;
 ;                                             ;               ;
 ; Total combinational functions               ; 5430          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 225           ;
-;     -- 3 input functions                    ; 2369          ;
-;     -- <=2 input functions                  ; 2836          ;
+;     -- 4 input functions                    ; 220           ;
+;     -- 3 input functions                    ; 2373          ;
+;     -- <=2 input functions                  ; 2837          ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
 ;     -- normal mode                          ; 5051          ;
 ;     -- arithmetic mode                      ; 379           ;
 ;                                             ;               ;
-; Total registers                             ; 8400          ;
-;     -- Dedicated logic registers            ; 8400          ;
+; Total registers                             ; 8434          ;
+;     -- Dedicated logic registers            ; 8434          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 100           ;
@@ -294,8 +294,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; reset_n~input ;
-; Maximum fan-out                             ; 8373          ;
-; Total fan-out                               ; 44928         ;
+; Maximum fan-out                             ; 8407          ;
+; Total fan-out                               ; 45025         ;
 ; Average fan-out                             ; 3.13          ;
 +---------------------------------------------+---------------+
 
@@ -305,8 +305,8 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |GECKO                                    ; 5430 (0)            ; 8400 (0)                  ; 998         ; 0            ; 0       ; 0         ; 100  ; 0            ; |GECKO                                                                                                           ; GECKO           ; work         ;
-;    |pipeline_lab:inst|                    ; 5430 (4666)         ; 8400 (8304)               ; 998         ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst                                                                                         ; pipeline_lab    ; work         ;
+; |GECKO                                    ; 5430 (0)            ; 8434 (0)                  ; 998         ; 0            ; 0       ; 0         ; 100  ; 0            ; |GECKO                                                                                                           ; GECKO           ; work         ;
+;    |pipeline_lab:inst|                    ; 5430 (4666)         ; 8434 (8304)               ; 998         ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst                                                                                         ; pipeline_lab    ; work         ;
 ;       |PLL:PLLUnit|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|PLL:PLLUnit                                                                             ; PLL             ; work         ;
 ;          |altpll:altpll_component|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|PLL:PLLUnit|altpll:altpll_component                                                     ; altpll          ; work         ;
 ;             |PLL_altpll:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|PLL:PLLUnit|altpll:altpll_component|PLL_altpll:auto_generated                           ; PLL_altpll      ; work         ;
@@ -365,15 +365,15 @@ refer to the applicable agreement for further details.
 ;             |altsyncram_l961:altsyncram4| ; 0 (0)               ; 0 (0)                     ; 294         ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|altshift_taps:FIFO_in_rtl_4|shift_taps_56n:auto_generated|altsyncram_l961:altsyncram4   ; altsyncram_l961 ; work         ;
 ;             |cntr_6pf:cntr1|              ; 5 (5)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|altshift_taps:FIFO_in_rtl_4|shift_taps_56n:auto_generated|cntr_6pf:cntr1                ; cntr_6pf        ; work         ;
 ;             |cntr_p8h:cntr5|              ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|altshift_taps:FIFO_in_rtl_4|shift_taps_56n:auto_generated|cntr_p8h:cntr5                ; cntr_p8h        ; work         ;
-;       |arith_unit:ArithmeticUnit|         ; 663 (63)            ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit                                                               ; arith_unit      ; work         ;
-;          |multiplier16:mul02|             ; 269 (16)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02                                            ; multiplier16    ; work         ;
+;       |arith_unit:ArithmeticUnit|         ; 663 (77)            ; 67 (67)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit                                                               ; arith_unit      ; work         ;
+;          |multiplier16:mul02|             ; 263 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02                                            ; multiplier16    ; work         ;
 ;             |multiplier:LSB8_LSB_MUL|     ; 128 (128)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02|multiplier:LSB8_LSB_MUL                    ; multiplier      ; work         ;
-;             |multiplier:LSB8_MSB_MUL|     ; 62 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02|multiplier:LSB8_MSB_MUL                    ; multiplier      ; work         ;
-;             |multiplier:MSB8_LSB_MUL|     ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02|multiplier:MSB8_LSB_MUL                    ; multiplier      ; work         ;
-;          |multiplier16:mul03|             ; 203 (15)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03                                            ; multiplier16    ; work         ;
-;             |multiplier:LSB8_LSB_MUL|     ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03|multiplier:LSB8_LSB_MUL                    ; multiplier      ; work         ;
-;             |multiplier:LSB8_MSB_MUL|     ; 52 (52)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03|multiplier:LSB8_MSB_MUL                    ; multiplier      ; work         ;
-;             |multiplier:MSB8_LSB_MUL|     ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03|multiplier:MSB8_LSB_MUL                    ; multiplier      ; work         ;
+;             |multiplier:LSB8_MSB_MUL|     ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02|multiplier:LSB8_MSB_MUL                    ; multiplier      ; work         ;
+;             |multiplier:MSB8_LSB_MUL|     ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02|multiplier:MSB8_LSB_MUL                    ; multiplier      ; work         ;
+;          |multiplier16:mul03|             ; 195 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03                                            ; multiplier16    ; work         ;
+;             |multiplier:LSB8_LSB_MUL|     ; 95 (95)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03|multiplier:LSB8_LSB_MUL                    ; multiplier      ; work         ;
+;             |multiplier:LSB8_MSB_MUL|     ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03|multiplier:LSB8_MSB_MUL                    ; multiplier      ; work         ;
+;             |multiplier:MSB8_LSB_MUL|     ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul03|multiplier:MSB8_LSB_MUL                    ; multiplier      ; work         ;
 ;          |multiplier:mul01|               ; 128 (128)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier:mul01                                              ; multiplier      ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -453,11 +453,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------+----------------------------------------+
 ; pipeline_lab:inst|FIFO_in_op[127]                                          ; Stuck at GND due to stuck port data_in ;
 ; pipeline_lab:inst|FIFO_comp[3946,3978,3980,4010,4012,4042,4044,4073..4079] ; Stuck at GND due to stuck port data_in ;
+; pipeline_lab:inst|arith_unit:ArithmeticUnit|temp_P03_n[16..31]             ; Lost fanout                            ;
+; pipeline_lab:inst|arith_unit:ArithmeticUnit|temp_P02_n[16..31]             ; Lost fanout                            ;
+; pipeline_lab:inst|arith_unit:ArithmeticUnit|temp_P03_n[1]                  ; Stuck at GND due to stuck port data_in ;
 ; pipeline_lab:inst|\FSM_verify:sync_state0.IDLE                             ; Lost fanout                            ;
 ; pipeline_lab:inst|\FSM_verify:sync_state0.COUNT                            ; Lost fanout                            ;
 ; pipeline_lab:inst|\FSM_verify:sync_state1.IDLE                             ; Lost fanout                            ;
 ; pipeline_lab:inst|\FSM_verify:sync_state1.COUNT                            ; Lost fanout                            ;
-; Total Number of Removed Registers = 19                                     ;                                        ;
+; Total Number of Removed Registers = 52                                     ;                                        ;
 +----------------------------------------------------------------------------+----------------------------------------+
 
 
@@ -478,10 +481,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8400  ;
+; Total registers                              ; 8434  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 8371  ;
+; Number of registers using Asynchronous Clear ; 8405  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 6272  ;
 ; Number of registers using Preset             ; 0     ;
@@ -1354,27 +1357,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 100                         ;
-; cycloneiii_ff         ; 8400                        ;
-;     CLR               ; 2112                        ;
+; cycloneiii_ff         ; 8434                        ;
+;     CLR               ; 2146                        ;
 ;     CLR SLD           ; 16                          ;
 ;     ENA               ; 29                          ;
 ;     ENA CLR           ; 6243                        ;
-; cycloneiii_lcell_comb ; 5436                        ;
+; cycloneiii_lcell_comb ; 5437                        ;
 ;     arith             ; 379                         ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 75                          ;
-;         3 data inputs ; 299                         ;
-;     normal            ; 5057                        ;
+;         2 data inputs ; 74                          ;
+;         3 data inputs ; 300                         ;
+;     normal            ; 5058                        ;
 ;         0 data inputs ; 31                          ;
-;         1 data inputs ; 2595                        ;
-;         2 data inputs ; 136                         ;
-;         3 data inputs ; 2070                        ;
-;         4 data inputs ; 225                         ;
+;         1 data inputs ; 2596                        ;
+;         2 data inputs ; 138                         ;
+;         3 data inputs ; 2073                        ;
+;         4 data inputs ; 220                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 341                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.40                       ;
-; Average LUT depth     ; 1.67                        ;
+; Max LUT depth         ; 9.40                        ;
+; Average LUT depth     ; 1.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1393,17 +1396,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 09 14:15:30 2020
+    Info: Processing started: Sun May 10 18:50:36 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file gecko.bdf
     Info (12023): Found entity 1: GECKO
-Info (12021): Found 5 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp5 24.04/vhdl/arith_unit.vhd
-    Info (12022): Found design unit 1: arith_unit-combinatorial File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 21
-    Info (12022): Found design unit 2: arith_unit-one_stage_pipeline File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 76
-    Info (12022): Found design unit 3: arith_unit-two_stage_pipeline_1 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 146
-    Info (12022): Found design unit 4: arith_unit-two_stage_pipeline_2 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 217
+Info (12021): Found 4 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp5 24.04/vhdl/arith_unit.vhd
+    Info (12022): Found design unit 1: arith_unit-one_stage_pipeline File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 23
+    Info (12022): Found design unit 2: arith_unit-two_stage_pipeline_1 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 97
+    Info (12022): Found design unit 3: arith_unit-two_stage_pipeline_2 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 185
     Info (12023): Found entity 1: arith_unit File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 5
 Info (12021): Found 6 design units, including 3 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp5 24.04/vhdl/multiplier.vhd
     Info (12022): Found design unit 1: multiplier-combinatorial File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/multiplier.vhd Line: 16
@@ -1420,9 +1422,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: PLL File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/PLL.vhd Line: 42
 Info (12127): Elaborating entity "GECKO" for the top level hierarchy
 Info (12128): Elaborating entity "pipeline_lab" for hierarchy "pipeline_lab:inst"
-Info (12129): Elaborating entity "arith_unit" using architecture "A:one_stage_pipeline" for hierarchy "pipeline_lab:inst|arith_unit:ArithmeticUnit" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd Line: 65
-Info (12128): Elaborating entity "multiplier" for hierarchy "pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier:mul01" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 97
-Info (12128): Elaborating entity "multiplier16" for hierarchy "pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 103
+Warning (10036): Verilog HDL or VHDL warning at pipeline_lab.vhd(47): object "s_val" assigned a value but never read File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd Line: 47
+Warning (10036): Verilog HDL or VHDL warning at pipeline_lab.vhd(47): object "s_act" assigned a value but never read File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at pipeline_lab.vhd(179): signal "FIFO_comp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd Line: 179
+Info (12129): Elaborating entity "arith_unit" using architecture "A:two_stage_pipeline_1" for hierarchy "pipeline_lab:inst|arith_unit:ArithmeticUnit" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd Line: 66
+Info (12128): Elaborating entity "multiplier" for hierarchy "pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier:mul01" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 117
+Info (12128): Elaborating entity "multiplier16" for hierarchy "pipeline_lab:inst|arith_unit:ArithmeticUnit|multiplier16:mul02" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 123
 Info (12128): Elaborating entity "PLL" for hierarchy "pipeline_lab:inst|PLL:PLLUnit" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/pipeline_lab.vhd Line: 80
 Info (12128): Elaborating entity "altpll" for hierarchy "pipeline_lab:inst|PLL:PLLUnit|altpll:altpll_component" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/PLL.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "pipeline_lab:inst|PLL:PLLUnit|altpll:altpll_component" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/PLL.vhd Line: 133
@@ -1714,19 +1719,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_LEDs[1]" is stuck at GND
     Warning (13410): Pin "out_LEDs[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 36 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "pipeline_lab:inst|arith_unit:ArithmeticUnit|temp_P03_n[8]~8" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP5 24.04/vhdl/arith_unit.vhd Line: 158
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9923 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9912 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 9481 logic cells
+    Info (21061): Implemented 9470 logic cells
     Info (21064): Implemented 341 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Sat May 09 14:15:51 2020
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4891 megabytes
+    Info: Processing ended: Sun May 10 18:50:57 2020
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Total CPU time (on all processors): 00:00:32
 
 
