@@ -173,17 +173,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity rgb_led96
 -- Compiling architecture arch of rgb_led96
 
-} {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd}
+} {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_textio
--- Loading package check_functions
--- Compiling entity tb_Extend
--- Compiling architecture testbench of tb_Extend
-** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd(40): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity iNStrUctiOn_RoM
+-- Compiling architecture id_S_10643F3b_2FC543EB_e of InsTRUctIOn_rOM
 
 } {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/data_ROM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/data_ROM.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -195,15 +193,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity DATa_rOM
 -- Compiling architecture id_S_10643F3b_2fc543EB_e of DATA_roM
 
-} {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd}
+} {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity iNStrUctiOn_RoM
--- Compiling architecture id_S_10643F3b_2FC543EB_e of InsTRUctIOn_rOM
+-- Loading package std_logic_textio
+-- Loading package check_functions
+-- Compiling entity tb_Extend
+-- Compiling architecture testbench of tb_Extend
+** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd(40): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/testbench/tb_Extend.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 
 } {} {}} {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
