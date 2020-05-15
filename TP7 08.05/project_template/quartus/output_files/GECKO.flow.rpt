@@ -1,5 +1,5 @@
 Flow report for GECKO
-Fri May 15 10:47:11 2020
+Fri May 15 11:44:08 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 15 10:47:06 2020       ;
+; Flow Status                        ; Successful - Fri May 15 11:44:04 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE30F23C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,592 / 28,848 ( 9 % )                      ;
-;     Total combinational functions  ; 2,501 / 28,848 ( 9 % )                      ;
+; Total logic elements               ; 2,571 / 28,848 ( 9 % )                      ;
+;     Total combinational functions  ; 2,503 / 28,848 ( 9 % )                      ;
 ;     Dedicated logic registers      ; 1,389 / 28,848 ( 5 % )                      ;
 ; Total registers                    ; 1389                                        ;
 ; Total pins                         ; 102 / 329 ( 31 % )                          ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/15/2020 10:46:32 ;
+; Start date & time ; 05/15/2020 11:43:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GECKO               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1097005183814.158953239204620          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1097005183814.158953581101848          ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                    ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
@@ -91,6 +91,7 @@ refer to the applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
+; SMART_RECOMPILE                     ; On                                     ; Off           ; --          ; --         ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                    ; --            ; --          ; eda_palace ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                               ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
@@ -101,11 +102,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4844 MB             ; 00:00:27                           ;
-; Fitter               ; 00:00:15     ; 1.1                     ; 5735 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4696 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 4847 MB             ; 00:00:04                           ;
-; Total                ; 00:00:36     ; --                      ; --                  ; 00:00:59                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4850 MB             ; 00:00:27                           ;
+; Fitter               ; 00:00:14     ; 1.1                     ; 5731 MB             ; 00:00:22                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4693 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 4849 MB             ; 00:00:04                           ;
+; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:55                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

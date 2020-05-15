@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Fri May 15 10:46:46 2020
+Fri May 15 11:43:45 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,13 +68,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 15 10:46:46 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 15 11:43:45 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,703                                       ;
-;     Total combinational functions  ; 2,501                                       ;
+; Total logic elements               ; 3,705                                       ;
+;     Total combinational functions  ; 2,503                                       ;
 ;     Dedicated logic registers      ; 1,389                                       ;
 ; Total registers                    ; 1389                                        ;
 ; Total pins                         ; 102                                         ;
@@ -93,7 +93,7 @@ refer to the applicable agreement for further details.
 ; Device                                                           ; EP4CE30F23C8       ;                    ;
 ; Top-level entity name                                            ; GECKO              ; GECKO              ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
+; Use smart compilation                                            ; On                 ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
 ; Restructure Multiplexers                                         ; Auto               ; Auto               ;
@@ -238,16 +238,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,703     ;
+; Estimated Total logic elements              ; 3,705     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2501      ;
+; Total combinational functions               ; 2503      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1742      ;
-;     -- 3 input functions                    ; 548       ;
-;     -- <=2 input functions                  ; 211       ;
+;     -- 4 input functions                    ; 1743      ;
+;     -- 3 input functions                    ; 551       ;
+;     -- <=2 input functions                  ; 209       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2413      ;
+;     -- normal mode                          ; 2415      ;
 ;     -- arithmetic mode                      ; 88        ;
 ;                                             ;           ;
 ; Total registers                             ; 1389      ;
@@ -261,7 +261,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1485      ;
-; Total fan-out                               ; 14619     ;
+; Total fan-out                               ; 14628     ;
 ; Average fan-out                             ; 3.49      ;
 +---------------------------------------------+-----------+
 
@@ -271,8 +271,8 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name           ; Library Name ;
 +--------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |GECKO                                                 ; 2501 (116)          ; 1389 (0)                  ; 98304       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                                                     ; GECKO                 ; work         ;
-;    |CPU:inst|                                          ; 2240 (0)            ; 1263 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                                                            ; CPU                   ; work         ;
+; |GECKO                                                 ; 2503 (116)          ; 1389 (0)                  ; 98304       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                                                     ; GECKO                 ; work         ;
+;    |CPU:inst|                                          ; 2242 (0)            ; 1263 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                                                            ; CPU                   ; work         ;
 ;       |ALU:alu_0|                                      ; 638 (26)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                                                                  ; ALU                   ; work         ;
 ;          |add_sub:add_sub_0|                           ; 76 (76)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                                                                ; add_sub               ; work         ;
 ;          |comparator:comparator_0|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|comparator:comparator_0                                                                                          ; comparator            ; work         ;
@@ -280,7 +280,7 @@ refer to the applicable agreement for further details.
 ;          |multiplexer:multiplexer_0|                   ; 216 (216)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                                                        ; multiplexer           ; work         ;
 ;          |shift_unit:shift_unit_0|                     ; 313 (313)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                                                          ; shift_unit            ; work         ;
 ;       |PC:inst6|                                       ; 105 (105)           ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:inst6                                                                                                                   ; PC                    ; work         ;
-;       |controller:inst7|                               ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:inst7                                                                                                           ; controller            ; work         ;
+;       |controller:inst7|                               ; 57 (57)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:inst7                                                                                                           ; controller            ; work         ;
 ;       |extend:inst1|                                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|extend:inst1                                                                                                               ; extend                ; work         ;
 ;       |mux2x32:mux_b|                                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                                                              ; mux2x32               ; work         ;
 ;       |mux2x32:mux_data|                               ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_data                                                                                                           ; mux2x32               ; work         ;
@@ -336,12 +336,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------------------+------------------------+
-; CPU:inst|controller:inst7|op_alu[0]                ; CPU:inst|controller:inst7|Mux30 ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[1]                ; CPU:inst|controller:inst7|Mux30 ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[2]                ; CPU:inst|controller:inst7|Mux30 ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[3]                ; CPU:inst|controller:inst7|Mux30 ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[4]                ; CPU:inst|controller:inst7|Mux30 ; yes                    ;
-; CPU:inst|controller:inst7|op_alu[5]                ; CPU:inst|controller:inst7|Mux30 ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[0]                ; CPU:inst|controller:inst7|Mux29 ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[1]                ; CPU:inst|controller:inst7|Mux29 ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[2]                ; CPU:inst|controller:inst7|Mux29 ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[3]                ; CPU:inst|controller:inst7|Mux29 ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[4]                ; CPU:inst|controller:inst7|Mux29 ; yes                    ;
+; CPU:inst|controller:inst7|op_alu[5]                ; CPU:inst|controller:inst7|Mux29 ; yes                    ;
 ; Number of user-specified and inferred latches = 6  ;                                 ;                        ;
 +----------------------------------------------------+---------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -399,19 +399,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+-----------------------------------------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 64:1               ; 2 bits    ; 84 LEs        ; 22 LEs               ; 62 LEs                 ; Yes        ; |GECKO|CPU:inst|pipeline_reg_DE:inst5|s_sel_b ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux0                 ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux3                 ;
-; 64:1               ; 3 bits    ; 126 LEs       ; 48 LEs               ; 78 LEs                 ; No         ; |GECKO|CPU:inst|controller:inst7|Mux9         ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[20]                             ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[7]                              ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[2]                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 64:1               ; 3 bits    ; 126 LEs       ; 39 LEs               ; 87 LEs                 ; Yes        ; |GECKO|CPU:inst|pipeline_reg_DE:inst5|s_sel_pc ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux1                  ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux6                  ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[31]                              ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[7]                               ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[2]                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -2275,20 +2274,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR SLD                          ; 4            ;
 ;     ENA CLR                          ; 104          ;
 ;     plain                            ; 2            ;
-; cycloneiii_lcell_comb                ; 410          ;
+; cycloneiii_lcell_comb                ; 412          ;
 ;     arith                            ; 55           ;
 ;         2 data inputs                ; 33           ;
 ;         3 data inputs                ; 22           ;
-;     normal                           ; 355          ;
+;     normal                           ; 357          ;
 ;         0 data inputs                ; 2            ;
 ;         1 data inputs                ; 11           ;
-;         2 data inputs                ; 111          ;
-;         3 data inputs                ; 71           ;
-;         4 data inputs                ; 160          ;
+;         2 data inputs                ; 109          ;
+;         3 data inputs                ; 74           ;
+;         4 data inputs                ; 161          ;
 ; cycloneiii_ram_block                 ; 96           ;
 ;                                      ;              ;
 ; Max LUT depth                        ; 5.30         ;
-; Average LUT depth                    ; 2.04         ;
+; Average LUT depth                    ; 2.03         ;
 +--------------------------------------+--------------+
 
 
@@ -2307,7 +2306,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 15 10:46:31 2020
+    Info: Processing started: Fri May 15 11:43:30 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2773,14 +2772,14 @@ Info (35003): Optimize away 187 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "CPU:inst|IR:IR_0|enable" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
     Info (35004): Node: "CPU:inst|IR:IR_0|clk" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
     Info (35004): Node: "CPU:inst|IR:IR_0|D[0]" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
-Info (21057): Implemented 3938 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3939 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 3740 logic cells
+    Info (21061): Implemented 3741 logic cells
     Info (21064): Implemented 96 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Fri May 15 10:46:46 2020
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Fri May 15 11:43:45 2020
     Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:27
 
