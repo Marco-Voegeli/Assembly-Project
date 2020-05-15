@@ -4,8 +4,6 @@ use ieee.numeric_std.all;
 
 entity controller is
     port(
-        clk        : in  std_logic;
-        reset_n    : in  std_logic;
         -- instruction opcode
         op         : in  std_logic_vector(5 downto 0);
         opx        : in  std_logic_vector(5 downto 0);
