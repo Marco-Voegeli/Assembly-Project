@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
--- CREATED		"Fri May 15 12:04:36 2020"
+-- CREATED		"Fri May 15 12:19:07 2020"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -232,6 +232,7 @@ SIGNAL	SYNTHESIZED_WIRE_32 :  STD_LOGIC;
 
 
 BEGIN 
+D_wrdata <= SYNTHESIZED_WIRE_31;
 
 
 
@@ -305,7 +306,7 @@ PORT MAP(clk => clk,
 		 branch_op_out => SYNTHESIZED_WIRE_23,
 		 sel_mem_out => SYNTHESIZED_WIRE_8,
 		 rf_wren_out => SYNTHESIZED_WIRE_9,
-		 a_out => SYNTHESIZED_WIRE_1,
+		 a_out => SYNTHESIZED_WIRE_0,
 		 b_out => SYNTHESIZED_WIRE_31,
 		 d_imm_out => d_imm_out,
 		 mux_out => SYNTHESIZED_WIRE_11,
@@ -376,7 +377,7 @@ b2v_mux_mem : mux2x32
 PORT MAP(sel => SYNTHESIZED_WIRE_30,
 		 i0 => d_imm_out,
 		 i1 => SYNTHESIZED_WIRE_31,
-		 o => SYNTHESIZED_WIRE_0);
+		 o => SYNTHESIZED_WIRE_1);
 
 
 b2v_mux_ra : mux2x5
@@ -397,6 +398,5 @@ PORT MAP(clk => clk,
 		 b => SYNTHESIZED_WIRE_19);
 
 D_addr(15 DOWNTO 0) <= s(15 DOWNTO 0);
-D_wrdata <= wrdata;
 
 END bdf_type;
