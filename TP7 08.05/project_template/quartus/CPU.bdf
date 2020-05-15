@@ -103,7 +103,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1920 -592 2139 -576)
+	(rect 976 -728 1195 -712)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "D_wrdata[31..0]" (rect 90 0 167 12)(font "Arial" ))
 	(pt 0 8)
@@ -266,7 +266,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1056 -480 1112 -384)
+	(rect 1064 -480 1120 -384)
 	(text "mux2x32" (rect 0 0 44 12)(font "Arial" ))
 	(text "mux_b" (rect 0 80 33 92)(font "Arial" ))
 	(port
@@ -1024,7 +1024,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 880 -504 968 -392)
+	(rect 888 -504 976 -392)
 	(text "ALU" (rect 5 98 29 112)(font "Arial" (font_size 8)))
 	(text "alu_0" (rect 8 4 33 16)(font "Arial" ))
 	(port
@@ -1519,28 +1519,8 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 736 -392)
-	(pt 800 -392)
-	(bus)
-)
-(connector
 	(pt 800 -392)
 	(pt 800 -408)
-	(bus)
-)
-(connector
-	(pt 736 -344)
-	(pt 928 -344)
-	(bus)
-)
-(connector
-	(pt 928 -392)
-	(pt 928 -344)
-	(bus)
-)
-(connector
-	(pt 856 -424)
-	(pt 880 -424)
 	(bus)
 )
 (connector
@@ -1554,25 +1534,12 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 768 -472)
-	(pt 880 -472)
-	(bus)
-)
-(connector
 	(pt 736 -360)
 	(pt 832 -360)
 )
 (connector
 	(pt 832 -360)
 	(pt 832 -376)
-)
-(connector
-	(pt 736 -296)
-	(pt 1088 -296)
-)
-(connector
-	(pt 1088 -296)
-	(pt 1088 -384)
 )
 (connector
 	(pt 736 -280)
@@ -1617,16 +1584,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 800 -216)
 	(pt 1240 -216)
-	(bus)
-)
-(connector
-	(pt 1112 -432)
-	(pt 1184 -432)
-	(bus)
-)
-(connector
-	(pt 1184 -432)
-	(pt 1184 -264)
 	(bus)
 )
 (connector
@@ -1987,16 +1944,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 968 -448)
-	(pt 1032 -448)
-	(bus)
-)
-(connector
-	(pt 1032 -448)
-	(pt 1056 -448)
-	(bus)
-)
-(connector
 	(text "s[15..0]" (rect 1042 -672 1076 -655)(font "Intel Clear" ))
 	(pt 1032 -656)
 	(pt 1104 -656)
@@ -2011,21 +1958,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1896 -384)
 	(pt 1896 -624)
-	(bus)
-)
-(connector
-	(pt 1920 -384)
-	(pt 1920 -584)
-	(bus)
-)
-(connector
-	(pt 1840 -384)
-	(pt 1896 -384)
-	(bus)
-)
-(connector
-	(pt 1896 -384)
-	(pt 1920 -384)
 	(bus)
 )
 (connector
@@ -2044,12 +1976,6 @@ refer to the applicable agreement for further details.
 	(text "wrdata[31..0]" (rect -30 -672 32 -655)(font "Intel Clear" ))
 	(pt 8 -656)
 	(pt -32 -656)
-	(bus)
-)
-(connector
-	(text "pc_addr[31..0]" (rect 1040 -432 1107 -415)(font "Intel Clear" ))
-	(pt 1056 -416)
-	(pt 1040 -416)
 	(bus)
 )
 (connector
@@ -2126,14 +2052,29 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "d_imm_out[31..0]" (rect 744 -544 827 -527)(font "Intel Clear" ))
-	(pt 776 -528)
-	(pt 760 -528)
+	(text "sel_branch" (rect -774 -312 -723 -295)(font "Intel Clear" ))
+	(pt -712 -296)
+	(pt -776 -296)
+)
+(connector
+	(text "s[0]" (rect 856 -280 873 -263)(font "Intel Clear" ))
+	(pt 912 -264)
+	(pt 888 -264)
+)
+(connector
+	(pt 1840 -384)
+	(pt 1896 -384)
 	(bus)
 )
 (connector
+	(text "d_imm_out[31..0]" (rect 808 -544 891 -527)(font "Intel Clear" ))
 	(pt 760 -528)
+	(pt 840 -528)
+	(bus)
+)
+(connector
 	(pt 760 -376)
+	(pt 760 -528)
 	(bus)
 )
 (connector
@@ -2147,14 +2088,120 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "sel_branch" (rect -774 -312 -723 -295)(font "Intel Clear" ))
-	(pt -712 -296)
-	(pt -776 -296)
+	(pt 976 -720)
+	(pt 776 -720)
+	(bus)
 )
 (connector
-	(text "s[0]" (rect 856 -280 873 -263)(font "Intel Clear" ))
-	(pt 912 -264)
-	(pt 888 -264)
+	(pt 776 -720)
+	(pt 776 -392)
+	(bus)
+)
+(connector
+	(pt 736 -392)
+	(pt 776 -392)
+	(bus)
+)
+(connector
+	(pt 776 -392)
+	(pt 800 -392)
+	(bus)
+)
+(connector
+	(pt 768 -472)
+	(pt 872 -472)
+	(bus)
+)
+(connector
+	(pt 736 -344)
+	(pt 936 -344)
+	(bus)
+)
+(connector
+	(pt 936 -344)
+	(pt 936 -392)
+	(bus)
+)
+(connector
+	(pt 872 -472)
+	(pt 872 -424)
+	(bus)
+)
+(connector
+	(pt 888 -424)
+	(pt 872 -424)
+	(bus)
+)
+(connector
+	(pt 856 -424)
+	(pt 856 -480)
+	(bus)
+)
+(connector
+	(pt 856 -480)
+	(pt 888 -480)
+	(bus)
+)
+(connector
+	(pt 888 -472)
+	(pt 888 -480)
+	(bus)
+)
+(connector
+	(pt 1048 -408)
+	(pt 1032 -408)
+	(bus)
+)
+(connector
+	(text "pc_addr[31..16]" (rect 1016 -440 1033 -367)(font "Intel Clear" )(vertical))
+	(pt 1032 -408)
+	(pt 1032 -376)
+	(bus)
+)
+(connector
+	(pt 736 -296)
+	(pt 1096 -296)
+)
+(connector
+	(pt 1096 -296)
+	(pt 1096 -384)
+)
+(connector
+	(pt 1184 -432)
+	(pt 1120 -432)
+	(bus)
+)
+(connector
+	(pt 1184 -264)
+	(pt 1184 -432)
+	(bus)
+)
+(connector
+	(pt 976 -448)
+	(pt 1032 -448)
+	(bus)
+)
+(connector
+	(pt 1032 -448)
+	(pt 1064 -448)
+	(bus)
+)
+(connector
+	(text "pc_addr[31..0]" (rect 1056 -432 1123 -415)(font "Intel Clear" ))
+	(pt 1064 -416)
+	(pt 1048 -416)
+	(bus)
+)
+(connector
+	(pt 1048 -416)
+	(pt 1048 -408)
+	(bus)
+)
+(connector
+	(text "pc_addr[15..0]" (rect 1032 -435 1049 -368)(font "Intel Clear" )(vertical))
+	(pt 1048 -408)
+	(pt 1048 -376)
+	(bus)
 )
 (junction (pt 160 -56))
 (junction (pt -72 -448))
@@ -2172,7 +2219,8 @@ refer to the applicable agreement for further details.
 (junction (pt -440 -600))
 (junction (pt -72 -688))
 (junction (pt -192 -608))
-(junction (pt 1896 -384))
 (junction (pt 440 -736))
 (junction (pt 312 -560))
 (junction (pt 760 -376))
+(junction (pt 776 -392))
+(junction (pt 1048 -408))
