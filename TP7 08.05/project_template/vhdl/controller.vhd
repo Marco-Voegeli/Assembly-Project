@@ -134,42 +134,57 @@ begin
 
     StateSwitch : process(op,opx)
     begin
-            read <= '1'; --F1
-            ir_en <= '1'; --F2
+        --Setting all outputs to 0
+        imm_signed <= '0';
+        branch_op  <= '0'; 
+        ir_en      <= '0';
+        pc_sel_a   <= '0';
+        pc_sel_imm <= '0';
+        rf_wren    <= '0';
+        sel_b      <= '0';
+        sel_mem    <= '0';
+        sel_pc     <= '0';
+        sel_ra     <= '0';
+        sel_rC     <= '0';
+        read       <= '0'; 
+        write      <= '0';
+
             case to_integer(unsigned(op)) is
                 when 16#3A# => 
                     case to_integer(unsigned(opx)) is 
                     --when 16#34# => 
                         --state_next <= BREAK; 
                     when 16#05# | 16#0D#  => 
-                        pc_sel_a <= '1'; --JMP
+                         pc_sel_a <= '1'; --JMP
                     when 16#02# | 16#3A# | 16#1A# | 16#12# =>
-                        rf_wren <= '1'; -- I_R_OP
-                        sel_rC <= '1';  -- I_R_OP
+                        rf_wren <= '1'; --I_R_OP
+                        sel_rC <= '1';  --I_R_OP
                     when 16#1D# =>
-                        rf_wren <= '1'; --CALL_R
-                        sel_pc  <= '1'; --CALL_R
-                        sel_ra  <= '1'; --CALL_R
+                        rf_wren <= '1';  --CALL_R
+                        sel_pc  <= '1';  --CALL_R
+                        sel_ra  <= '1';  --CALL_R
                         pc_sel_a <= '1'; --CALL_R
-                    when others => 
-                        sel_b <= '1'; --R_OP
-                        sel_rC <= '1'; --R_OP
+                    when others =>
+                        sel_b <= '1';   --R_OP
+                        sel_rC <= '1';  --R_OP
                         rf_wren <= '1'; --R_OP
                     end case;
                 when 16#04# =>
                     rf_wren    <= '1'; --IOP
                     imm_signed <= '1'; --IOP
                 when 16#17# =>
-                    read <= '1'; --LOAD1
+                    read <= '1';       --LOAD1
                     imm_signed <= '1'; --LOAD1
-                    sel_mem <= '1'; --LOAD2
-                    rf_wren <= '1'; --LOAD
+                    sel_rC <= '1';     --LOAD1
+                    sel_mem <= '1';    --LOAD2
+                    rf_wren <= '1';    --LOAD2
                 when 16#15# =>
-                    write <= '1'; --STORE
+                    write <= '1';      --STORE
                     imm_signed <= '1'; --STORE
                 when 16#06# | 16#0E# | 16#16# | 16#1E# | 16#26# | 16#2E# | 16#36# =>
-                    branch_op <= '1'; --BRANCH
-                    sel_b <= '1'; --BRANCH
+                    --branch <= '1'; --BRANCH 
+                    branch_op <= '1';  --BRANCH TODO IS THIS THE REPLACEMENT FOR PC_ADD_IMM?
+                    sel_b <= '1';      --BRANCH 
                 when 16#00# =>
                     rf_wren <= '1'; --CALL
                     sel_pc  <= '1'; --CALL

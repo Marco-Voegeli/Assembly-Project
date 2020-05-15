@@ -34,7 +34,7 @@ elsif(rising_edge(clk)) then
 end if;
 end process main;
 
-mux03: process(sel_imm, sel_a)
+mux03: process(sel_imm, sel_a, add02, add03, d_imm)
 begin
 sel_conc <= sel_imm & sel_a;
 case  (sel_conc) is
@@ -47,7 +47,6 @@ case  (sel_conc) is
     when others => null;
 end case;
 end process mux03;
-
 
 add01 <= e_imm + ((15 downto 3 => '0') & "100");
 mux01 <= pc_addr WHEN (branch = '1') ELSE s_next_addr; 

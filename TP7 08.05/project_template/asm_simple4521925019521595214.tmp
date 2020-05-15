@@ -2,13 +2,5 @@ main:
 	addi t1, zero, 100
 nop
 nop
-nop
 	stw t1, 0x2004(zero)
-nop
-nop
-nop
-nop
-nop
 end: break 
-nop
-nop
