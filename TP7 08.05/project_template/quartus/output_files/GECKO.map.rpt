@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Fri May 15 11:43:45 2020
+Fri May 15 12:19:56 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,13 +68,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 15 11:43:45 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 15 12:19:55 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,705                                       ;
-;     Total combinational functions  ; 2,503                                       ;
+; Total logic elements               ; 3,703                                       ;
+;     Total combinational functions  ; 2,501                                       ;
 ;     Dedicated logic registers      ; 1,389                                       ;
 ; Total registers                    ; 1389                                        ;
 ; Total pins                         ; 102                                         ;
@@ -238,16 +238,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,705     ;
+; Estimated Total logic elements              ; 3,703     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2503      ;
+; Total combinational functions               ; 2501      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1743      ;
-;     -- 3 input functions                    ; 551       ;
+;     -- 4 input functions                    ; 1733      ;
+;     -- 3 input functions                    ; 559       ;
 ;     -- <=2 input functions                  ; 209       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2415      ;
+;     -- normal mode                          ; 2413      ;
 ;     -- arithmetic mode                      ; 88        ;
 ;                                             ;           ;
 ; Total registers                             ; 1389      ;
@@ -261,7 +261,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1485      ;
-; Total fan-out                               ; 14628     ;
+; Total fan-out                               ; 14612     ;
 ; Average fan-out                             ; 3.49      ;
 +---------------------------------------------+-----------+
 
@@ -271,15 +271,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                        ; Entity Name           ; Library Name ;
 +--------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |GECKO                                                 ; 2503 (116)          ; 1389 (0)                  ; 98304       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                                                     ; GECKO                 ; work         ;
-;    |CPU:inst|                                          ; 2242 (0)            ; 1263 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                                                            ; CPU                   ; work         ;
+; |GECKO                                                 ; 2501 (116)          ; 1389 (0)                  ; 98304       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                                                     ; GECKO                 ; work         ;
+;    |CPU:inst|                                          ; 2240 (0)            ; 1263 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                                                            ; CPU                   ; work         ;
 ;       |ALU:alu_0|                                      ; 638 (26)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                                                                  ; ALU                   ; work         ;
 ;          |add_sub:add_sub_0|                           ; 76 (76)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                                                                ; add_sub               ; work         ;
 ;          |comparator:comparator_0|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|comparator:comparator_0                                                                                          ; comparator            ; work         ;
 ;          |logic_unit:logic_unit_0|                     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|logic_unit:logic_unit_0                                                                                          ; logic_unit            ; work         ;
 ;          |multiplexer:multiplexer_0|                   ; 216 (216)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                                                        ; multiplexer           ; work         ;
 ;          |shift_unit:shift_unit_0|                     ; 313 (313)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                                                          ; shift_unit            ; work         ;
-;       |PC:inst6|                                       ; 105 (105)           ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:inst6                                                                                                                   ; PC                    ; work         ;
+;       |PC:inst6|                                       ; 103 (103)           ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:inst6                                                                                                                   ; PC                    ; work         ;
 ;       |controller:inst7|                               ; 57 (57)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:inst7                                                                                                           ; controller            ; work         ;
 ;       |extend:inst1|                                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|extend:inst1                                                                                                               ; extend                ; work         ;
 ;       |mux2x32:mux_b|                                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                                                              ; mux2x32               ; work         ;
@@ -404,12 +404,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|PC:inst6|s_next_addr[0]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|PC:inst6|s_next_addr[13]       ;
 ; 64:1               ; 3 bits    ; 126 LEs       ; 39 LEs               ; 87 LEs                 ; Yes        ; |GECKO|CPU:inst|pipeline_reg_DE:inst5|s_sel_pc ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux1                  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux6                  ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[31]                              ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[7]                               ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[2]                               ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|PC:inst6|Mux13                 ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[26]                              ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[6]                               ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[0]                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
@@ -2274,20 +2275,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR SLD                          ; 4            ;
 ;     ENA CLR                          ; 104          ;
 ;     plain                            ; 2            ;
-; cycloneiii_lcell_comb                ; 412          ;
+; cycloneiii_lcell_comb                ; 410          ;
 ;     arith                            ; 55           ;
 ;         2 data inputs                ; 33           ;
 ;         3 data inputs                ; 22           ;
-;     normal                           ; 357          ;
+;     normal                           ; 355          ;
 ;         0 data inputs                ; 2            ;
 ;         1 data inputs                ; 11           ;
 ;         2 data inputs                ; 109          ;
-;         3 data inputs                ; 74           ;
-;         4 data inputs                ; 161          ;
+;         3 data inputs                ; 82           ;
+;         4 data inputs                ; 151          ;
 ; cycloneiii_ram_block                 ; 96           ;
 ;                                      ;              ;
 ; Max LUT depth                        ; 5.30         ;
-; Average LUT depth                    ; 2.03         ;
+; Average LUT depth                    ; 2.04         ;
 +--------------------------------------+--------------+
 
 
@@ -2306,7 +2307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 15 11:43:30 2020
+    Info: Processing started: Fri May 15 12:19:41 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2392,23 +2393,6 @@ Info (10041): Inferred latch for "op_alu[5]" at controller.vhd(42) File: C:/User
 Info (12128): Elaborating entity "pipeline_reg_FD" for hierarchy "CPU:inst|pipeline_reg_FD:inst3"
 Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst|PC:inst6"
 Warning (10492): VHDL Process Statement warning at PC.vhd(40): signal "sel_conc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 40
-Warning (10631): VHDL Process Statement warning at PC.vhd(37): inferring latch(es) for signal or variable "big_mux", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[0]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[1]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[2]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[3]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[4]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[5]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[6]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[7]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[8]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[9]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[10]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[11]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[12]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[13]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[14]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Info (10041): Inferred latch for "big_mux[15]" at PC.vhd(37) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
 Info (12128): Elaborating entity "ALU" for hierarchy "CPU:inst|ALU:alu_0"
 Info (12128): Elaborating entity "mux2x32" for hierarchy "CPU:inst|mux2x32:mux_mem"
 Info (12128): Elaborating entity "register_file" for hierarchy "CPU:inst|register_file:register_file_0"
@@ -2530,22 +2514,6 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "iNStrUctiOn_RoM:inst4|rddaTa[29]" feeding internal logic into a wire File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd Line: 1
     Warning (13049): Converted tri-state buffer "iNStrUctiOn_RoM:inst4|rddaTa[30]" feeding internal logic into a wire File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd Line: 1
     Warning (13049): Converted tri-state buffer "iNStrUctiOn_RoM:inst4|rddaTa[31]" feeding internal logic into a wire File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/instruction_ROM.vhd Line: 1
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[2]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[3]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[4]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[5]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[6]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[7]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[8]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[9]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[10]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[11]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[0]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[12]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[13]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[14]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[15]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
-Warning (14026): LATCH primitive "CPU:inst|PC:inst6|big_mux[1]" is permanently enabled File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 37
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "RAM:RAM_0|Id_S_B889004_7e48Ff67_e_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
@@ -2772,15 +2740,15 @@ Info (35003): Optimize away 187 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "CPU:inst|IR:IR_0|enable" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
     Info (35004): Node: "CPU:inst|IR:IR_0|clk" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
     Info (35004): Node: "CPU:inst|IR:IR_0|D[0]" File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/IR.qxp Line: -1
-Info (21057): Implemented 3939 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3937 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 3741 logic cells
+    Info (21061): Implemented 3739 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Fri May 15 11:43:45 2020
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Fri May 15 12:19:56 2020
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:26
 
 
