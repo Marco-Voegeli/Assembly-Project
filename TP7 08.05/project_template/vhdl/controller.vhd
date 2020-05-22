@@ -11,8 +11,6 @@ entity controller is
         branch_op  : out std_logic;
         -- immediate value sign extention
         imm_signed : out std_logic;
-        -- instruction register enable
-        ir_en      : out std_logic;
         -- PC control signals
         pc_sel_a   : out std_logic;
         pc_sel_imm : out std_logic;
