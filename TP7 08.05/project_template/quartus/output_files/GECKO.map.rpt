@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Fri May 15 12:19:56 2020
+Thu May 28 16:43:55 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 15 12:19:55 2020       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 28 16:43:55 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
@@ -2307,7 +2307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 15 12:19:41 2020
+    Info: Processing started: Thu May 28 16:43:39 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2364,7 +2364,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: buttons-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/buttons.vhd Line: 22
     Info (12023): Found entity 1: buttons File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/buttons.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp7 08.05/project_template/vhdl/controller.vhd
-    Info (12022): Found design unit 1: controller-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 39
+    Info (12022): Found design unit 1: controller-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 35
     Info (12023): Found entity 1: controller File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/marcopc/documents/work/epfl/ba4/archsoc/archsocproject1/tp7 08.05/project_template/vhdl/leds.vhd
     Info (12022): Found design unit 1: LEDs-synth File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd Line: 22
@@ -2383,13 +2383,13 @@ Warning (275013): Port "clk" of type IR and instance "inst" is missing source si
 Warning (275013): Port "clk" of type IR and instance "IR_0" is missing source signal
 Info (12128): Elaborating entity "pipeline_reg_DE" for hierarchy "CPU:inst|pipeline_reg_DE:inst5"
 Info (12128): Elaborating entity "controller" for hierarchy "CPU:inst|controller:inst7"
-Warning (10631): VHDL Process Statement warning at controller.vhd(42): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
-Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
-Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
-Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
-Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
-Info (10041): Inferred latch for "op_alu[4]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
-Info (10041): Inferred latch for "op_alu[5]" at controller.vhd(42) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (10631): VHDL Process Statement warning at controller.vhd(38): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
+Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(38) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
+Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(38) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
+Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(38) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
+Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(38) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
+Info (10041): Inferred latch for "op_alu[4]" at controller.vhd(38) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
+Info (10041): Inferred latch for "op_alu[5]" at controller.vhd(38) File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
 Info (12128): Elaborating entity "pipeline_reg_FD" for hierarchy "CPU:inst|pipeline_reg_FD:inst3"
 Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst|PC:inst6"
 Warning (10492): VHDL Process Statement warning at PC.vhd(40): signal "sel_conc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/PC.vhd Line: 40
@@ -2538,17 +2538,17 @@ Info (12133): Instantiated megafunction "RAM:RAM_0|altsyncram:Id_S_B889004_7e48F
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vh41.tdf
     Info (12023): Found entity 1: altsyncram_vh41 File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/quartus/db/altsyncram_vh41.tdf Line: 27
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[0] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[0] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[3] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[1] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[1] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[4] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[2] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[2] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[5] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[3] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[3] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[4] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[4] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
-Warning (13012): Latch CPU:inst|controller:inst7|op_alu[5] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 42
+Warning (13012): Latch CPU:inst|controller:inst7|op_alu[5] has unsafe behavior File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/controller.vhd Line: 38
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|pipeline_reg_FD:inst3|I_rddata_out_s[0] File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/pipeline_reg_FD.vhd Line: 24
 Info (13000): Registers with preset signals will power-up high File: C:/Users/MarcoPC/Documents/Work/EPFL/BA4/ArchSoC/ArchSoCProject1/TP7 08.05/project_template/vhdl/LEDs.vhd Line: 79
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -2746,9 +2746,9 @@ Info (21057): Implemented 3937 device resources after synthesis - the final reso
     Info (21061): Implemented 3739 logic cells
     Info (21064): Implemented 96 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 83 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Fri May 15 12:19:56 2020
-    Info: Elapsed time: 00:00:15
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Thu May 28 16:43:55 2020
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:26
 
 

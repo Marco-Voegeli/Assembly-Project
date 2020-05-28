@@ -1,14 +1,16 @@
 main: 
 	addi t1, zero, 100
+loop:
+	addi t0, t0, 1
+	nop
+	nop	
+	nop
+	stw t0, 0x2004(zero)
+	beq t0, t1, end
+	jmpi loop
+nop 
+nop
+end: break
 nop
 nop
-nop
-	stw t1, 0x2004(zero)
-nop
-nop
-nop
-nop
-nop
-end: break 
-nop
-nop
+

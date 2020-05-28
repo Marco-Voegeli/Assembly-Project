@@ -133,7 +133,6 @@ begin
         --Setting all outputs to 0
         imm_signed <= '0';
         branch_op  <= '0'; 
-        ir_en      <= '0';
         pc_sel_a   <= '0';
         pc_sel_imm <= '0';
         rf_wren    <= '0';

@@ -4,8 +4,6 @@ use ieee.numeric_std.all;
 
 entity controller is
     port(
-        clk        : in  std_logic;
-        reset_n    : in  std_logic;
         -- instruction opcode
         op         : in  std_logic_vector(5 downto 0);
         opx        : in  std_logic_vector(5 downto 0);
@@ -13,8 +11,6 @@ entity controller is
         branch_op  : out std_logic;
         -- immediate value sign extention
         imm_signed : out std_logic;
-        -- instruction register enable
-        ir_en      : out std_logic;
         -- PC control signals
         pc_sel_a   : out std_logic;
         pc_sel_imm : out std_logic;
@@ -137,7 +133,6 @@ begin
         --Setting all outputs to 0
         imm_signed <= '0';
         branch_op  <= '0'; 
-        ir_en      <= '0';
         pc_sel_a   <= '0';
         pc_sel_imm <= '0';
         rf_wren    <= '0';

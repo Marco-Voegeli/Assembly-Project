@@ -1486,8 +1486,6 @@ next_addr_out[15] <= s_next_addr[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |GECKO|CPU:inst|controller:inst7
-clk => ~NO_FANOUT~
-reset_n => ~NO_FANOUT~
 op[0] => Mux4.IN69
 op[0] => Mux5.IN69
 op[0] => Mux6.IN69
@@ -1669,7 +1667,6 @@ opx[5] => Mux27.IN64
 opx[5] => Mux28.IN64
 branch_op <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
 imm_signed <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-ir_en <= <GND>
 pc_sel_a <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
 pc_sel_imm <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
 rf_wren <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
